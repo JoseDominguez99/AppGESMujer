@@ -1,0 +1,71 @@
+<app-header titulo="autocuidado"></app-header>
+
+<ion-content>
+  <ion-segment value="pizza" scrollable="true" mode="md" (ionChange)="selectCategory($event)">
+    <ion-segment-button value="Fisico">
+      <ion-label>Físico</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Emocional">
+      <ion-label>Emocional y mental</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Laboral">
+      <ion-label>Laboral</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Digital">
+      <ion-label>Digital</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div *ngIf="seleccion === 'Fisico'" class="ion-text-center ion-padding">
+    <h1>AUTOCUIDADO FÍSICO</h1>
+    <p class="ion-text-justify ion-padding">Mantengo un cuerpo saludable: Cuido
+      mi salud física, sexual, reproductiva
+      y una nutrición adecuada. Para descansar elimino el estrés, duermo
+      libre de tensiones y realizo
+      rituales de sanación.</p>
+
+      <p class="piensa">“Encontré que bailar me ayuda
+        a relajarme, me miro mientras
+        bailo y trato de encontrar mi
+        propia fuerza, mi sensualidad,
+        mi desfachatez, en fin, mi
+        libertad”. </p>
+      <img src="../../../assets/Imagen2.png" style="max-width: 60%; max-height: 60%;" class="globo">
+      <img src="../../../assets/Imagen1.png" alt="">
+
+      <p>En esta clave resaltamos los siguientes puntos a tomar en cuenta en el cuidado de la salud física:</p>
+
+      <ion-card class="cardInfo">
+        <img src="../../../assets/Imagen3.png" alt="">
+      </ion-card>
+  </div>
+
+  <div *ngIf="seleccion === 'Emocional'">
+    <p class="ion-text-justify ion-padding">Conecto con mis emociones: Libero
+      mi voz y mi fuerza para sanarme,
+      expreso asertivamente lo que pienso, siento y quiero. Me permito ser
+      resiliente, a través de la risa, el
+      gozo, el placer sexual y erótico. En armonía busco
+      ayuda y me dejo ayudar.</p>
+  </div>
+
+  <div *ngIf="seleccion === 'Laboral'">
+    <p class="ion-text-justify ion-padding">Equilibrio mi activismo, mi
+      vida personal y laboral: Participo
+      en redes basadas en la filosofía
+      feminista. Aplico el protocolo de
+      seguridad individual y colectiva al
+      realizar tareas de activismo público.
+      Pongo límite a agendas y horarios
+      laborales, respeto fines de semana,
+      vacaciones y días festivos. </p>
+  </div>
+
+  <div *ngIf="seleccion === 'Digital'">
+    <p class="ion-text-justify ion-padding">Cuido mi seguridad digital:
+      Hago uso estratégico de la
+      tecnología, plataformas digitales,
+      redes sociales, conozco mis derechos digitales y de qué manera la
+      ley me protege. Promuevo la desconexión digi</p>
+  </div>
+</ion-content>

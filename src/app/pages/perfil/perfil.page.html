@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title class="ion-text-center">Perfil</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid fixed class="ion-padding">
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <div class="imagen" (click)="selectImage()">
+          <img [src]="perfilFoto || '../../../assets/GESMujer45años.png'">
+        </div>
+        <input type="file" id="fileInput" (change)="uploadImage($event)" hidden>
+      </ion-col>
+    </ion-row>
+    <ion-row >
+      <ion-col size="12">
+        <ion-label  class="titulos">Nombre:</ion-label>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label>{{datos.nombre}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-label class="titulos">Correo electrónico:</ion-label>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label>{{userMail}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-label class="titulos">Edad:</ion-label>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label>{{datos.edad}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-label class="titulos">Ciudad:</ion-label>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label>{{datos.estado}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-label class="titulos">Localidad:</ion-label>
+      </ion-col>
+      <ion-col size="12">
+        <ion-label>{{datos.localidad}}</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <ion-button expand="in-block" shape="round" (click)="perfilCompleto()">
+          Completa tu perfil
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

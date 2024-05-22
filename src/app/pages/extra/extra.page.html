@@ -1,0 +1,32 @@
+<app-header titulo="Completa tu perfil"></app-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid class="ion-padding">
+    <ion-row class="ion-text-center">
+      <div class="imagen">
+        <img src="../../../assets/GESMujer45años.png">
+      </div>
+      <ion-col size="12">
+        <ion-item>
+          <ion-input type="text" labelPlacement="floating" label="Nombre" [(ngModel)]="datos.nombre"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="email" [(ngModel)]="datos.correo" [readonly]="true" placeholder="{{userMail}}" labelPlacement="floating" label="Correo electrónico"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="number" labelPlacement="floating" [(ngModel)]="datos.edad" label="Edad"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" labelPlacement="floating" label="Estado" [(ngModel)]="datos.estado"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" labelPlacement="floating" label="Localidad" [(ngModel)]="datos.localidad"></ion-input>
+        </ion-item>
+        <br>
+        <ion-button  shape="round" (click)="guardar()">
+          Guardar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

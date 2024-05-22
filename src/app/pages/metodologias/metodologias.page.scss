@@ -1,0 +1,124 @@
+.titulo1 {
+  color: #4f4ea0;
+}
+
+.titulo2 {
+  color: #108386;
+}
+
+.titulo3 {
+  color: #ABB8C3;
+}
+
+.titulo4 {
+  color:  #FF7F50;
+}
+
+.titulo5 {
+  color:  #6A5ACD;
+}
+
+.titulo6 {
+  color:  #FF69B4;
+}
+
+.titulo7 {
+  color:  #20B2AA;
+}
+
+.titulo8 {
+  color:  #FFA07A;
+}
+
+.titulo9 {
+  color:  #DAA520;
+}
+
+.titulo10 {
+  color:  #87CEFA;
+}
+
+.titulo11 {
+  color:  #FF4500;
+}
+
+.titulo12 {
+  color:  #8A2BE2;
+}
+
+.titulo13 {
+  color: #FF6347;
+}
+
+.swiper-pagination-bullet {
+  background: #4f4ea0; /* Color de los bullets de paginación */
+}
+
+.swiper-pagination-container {
+  position: absolute;
+  bottom: 10px;  /* Ajusta según sea necesario */
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.swiper-container, .cards1 {
+  position: relative;
+}
+
+.cardsContent {
+  font-size: 18px;
+  color: black;
+}
+
+.cards1 {
+  border-radius: 10px;
+  box-shadow: -4px 8px 10px rgba(0, 0, 0, 0.1); /* Horizontal | Vertical | Desenfoque | Color */
+}
+
+.my-custom-class {
+  --min-width: 200px;
+  --max-width: 300px;
+}
+
+.cards1 img {
+  border-radius: 10px;
+  
+}
+
+.card-title-overlay {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  right: 0;
+  color: black; /* Color del texto del título */
+  padding: 10px; /* Espacio interior del título */
+  border-top-left-radius: 10px; /* Redondea la esquina superior izquierda */
+  border-top-right-radius: 10px; /* Redondea la esquina superior derecha */
+  z-index: 1; /* Asegura que el título esté sobre la imagen */
+  font-size: 30px;
+  font-weight: bold; /* Cambiado de font-style a font-weight */
+}
+
+.swiperCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.swiper-slide-active .cards1 {
+  transform: rotate(0deg); /* Alinear la tarjeta activa */
+}
