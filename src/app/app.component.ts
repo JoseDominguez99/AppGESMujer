@@ -20,7 +20,6 @@ export class AppComponent {
     { title: 'Botiquín de autocuidado', url: '/botiquin', icon: 'medkit' },
     { title: 'Autocuidado colectivo', url: '/colectivo', icon: 'people' },
     { title: 'Prevención de la violencia', url: '/prevencion', icon: 'hand-right' },
-    { title: 'Tips', url: '/tips', icon: 'help-circle' },
     { title: 'Créditos', url: '/creditos', icon: 'information-circle' },
     { title: 'Ayúdanos a crecer', url: '/extra', icon: 'id-card' },
   ];

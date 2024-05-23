@@ -28,10 +28,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/prevencion/prevencion.module').then( m => m.PrevencionPageModule)
   },
   {
-    path: 'tips',
-    loadChildren: () => import('./pages/tips/tips.module').then( m => m.TipsPageModule)
-  },
-  {
     path: 'creditos',
     loadChildren: () => import('./pages/creditos/creditos.module').then( m => m.CreditosPageModule)
   },
@@ -46,6 +42,10 @@ const routes: Routes = [
   {
     path: 'autocuidado',
     loadChildren: () => import('./pages/autocuidado/autocuidado.module').then( m => m.AutocuidadoPageModule)
+  },
+  {
+    path: 'kit-seguridad',
+    loadChildren: () => import('./pages/kit-seguridad/kit-seguridad.module').then( m => m.KitSeguridadPageModule)
   },
 ];
 

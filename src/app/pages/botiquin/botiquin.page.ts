@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DescargasService } from 'src/app/services/descargas.service';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-botiquin',
@@ -9,7 +12,14 @@ export class BotiquinPage implements OnInit {
   audioReproduciendose: boolean = false;
   audio: any;
 
-  constructor() { }
+
+  constructor(
+    private router: Router,
+    private descarga: DescargasService,
+    private toastCtrl: ToastController) { 
+    
+  }
+
 
   ngOnInit() {
     this.audio = new Audio();
@@ -32,5 +42,37 @@ export class BotiquinPage implements OnInit {
     this.audio.pause();
     this.audioReproduciendose = false;
   }
+
+  abrirKit(){
+    this.router.navigate(['/kit-seguridad']);
+  }
+
+  downloadPoliticas() {
+    this.descarga.downloadFile('documentos/politicas.docx').subscribe(url => {
+      window.open(url, '_blank');
+      this.mostrarToast('Documento guardado en el dispositivo');
+    }, error => {
+      console.error('Error al descargar el archivo', error);
+    });
+  }
+  downloadPlan() {
+    this.descarga.downloadFile('documentos/PLAN_DE_AUTOCUIDADO_COLECTIVO.docx').subscribe(url => {
+      window.open(url, '_blank');
+      this.mostrarToast('Documento guardado en el dispositivo');
+    }, error => {
+      console.error('Error al descargar el archivo', error);
+    });
+  }
+
+  async mostrarToast(mensaje: string) {
+    const toast = await this.toastCtrl.create({
+      message: mensaje,
+      duration: 2000, 
+      position: 'bottom',
+      animated: true,
+    });
+    toast.present();
+  }
+
 
 }

@@ -4,7 +4,7 @@
     <ion-grid fixed>
         <ion-row>
             <ion-col size="12">
-                <ion-card>
+                <ion-card (click)="abrirKit()">
                     <ion-card-header>
                         <img src="../../../assets/Paso9.png" alt="">
                         <ion-card-subtitle class="ion-text-justify">Te compartimos un Kit de seguridad digital para defensoras de derechos humanos de las mujeres,
@@ -17,6 +17,7 @@
                         <h1>
                             KIT DE SEGURIDAD DIGITAL
                         </h1>
+                        <p>*Da click aquí para saber más</p>
                     </ion-card-content>
                 </ion-card>
             </ion-col>
@@ -158,6 +159,50 @@
                         <a href="https://www.gesmujer.org/sitio/wp-content/uploads/2023/07/08.-Plan-de-Autocuidado-Individual.pdf" 
                         target="_blank" 
                         rel="noopener noreferrer">PLAN DE AUTOCUIDADO</a>
+                        <p>*Necesitas conexión a internet</p>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col size="12">
+                <ion-card>
+                    <ion-card-header>
+                        <img src="../../../assets/Paso1.png" alt="">
+                        <ion-card-subtitle class="ion-text-justify">Pasos para expresar lo que siento y necesito.
+                        </ion-card-subtitle>
+                    </ion-card-header>
+                    <ion-card-content class="ion-text-center">
+                        <a href="https://www.gesmujer.org/sitio/wp-content/uploads/2023/07/10.-Pasos-para-expresar-lo-que-siento.pdf" 
+                        target="_blank" 
+                        rel="noopener noreferrer">COMUNICACIÓN ASERTIVA</a>
+                        <p>*Necesitas conexión a internet</p>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col size="12">
+                <ion-card (click)="downloadPoliticas()">
+                    <ion-card-header>
+                        <img src="../../../assets/Paso1.png" alt="">
+                        <ion-card-subtitle class="ion-text-justify">Descarga Formato de Políticas Institucionales de Autocuidado.
+                        </ion-card-subtitle>
+                    </ion-card-header>
+                    <ion-card-content class="ion-text-center">
+                        <a>POLÍTICAS DE AUTOCUIDADO</a>
+                        <p>*Necesitas conexión a internet</p>
+                    </ion-card-content>
+                </ion-card>
+            </ion-col>
+            <ion-col size="12">
+                <ion-card (click)="downloadPlan()">
+                    <ion-card-header>
+                        <img src="../../../assets/Paso1.png" alt="">
+                        <ion-card-subtitle class="ion-text-justify">Para dar paso al plan de cuidado colectivo, es importante primero 
+                            realizar un diagnóstico con nuestra colectiva, equipa u organización, con quienes laboramos y, 
+                            poder encontrar los niveles de riesgo, diseñar estrategias y herramientas que permitan disminuir el impacto 
+                            y mantener procesos armónicos  de crecimiento dentro de nuestros espacios y colectivas. Descarga el Formato.
+                        </ion-card-subtitle>
+                    </ion-card-header>
+                    <ion-card-content class="ion-text-center">
+                        <a>PLAN DE AUTOCUIDADO Y CUIDADO COLECTIVO</a>
                         <p>*Necesitas conexión a internet</p>
                     </ion-card-content>
                 </ion-card>

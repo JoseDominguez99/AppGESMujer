@@ -11,6 +11,9 @@ import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
+import { File } from '@awesome-cordova-plugins/file/ngx';
+import { FileTransfer } from '@awesome-cordova-plugins/file-transfer/ngx';
+
 
 
 @NgModule({
@@ -25,7 +28,9 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers:
+  [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy}, File,
+    FileTransfer],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
