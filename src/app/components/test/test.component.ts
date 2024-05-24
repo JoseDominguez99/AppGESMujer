@@ -25,14 +25,17 @@ export class TestComponent  implements OnInit {
   aumentarSi(){
     this.step += 1;
     this.si += 1;
-    console.log(this.step);
+    this.progress = this.progress + 0.09;
+    console.log('pregunta: ' + this.step);
+    console.log('progreso: ' + this.progress);
   }
 
   aumentarNo(){
     this.step += 1;
     this.no += 1;
-    console.log(this.step);
-    
+    this.progress = this.progress + 0.09;
+    console.log('pregunta: ' + this.step);
+    console.log('progreso: ' + this.progress);
   }
 
 }
