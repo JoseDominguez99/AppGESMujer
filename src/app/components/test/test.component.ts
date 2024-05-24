@@ -13,6 +13,7 @@ export class TestComponent  implements OnInit {
   step = 1;
   si = 0;
   no = 0;
+  res = 0;
 
   constructor(private modalCtrl: ModalController) { }
 
@@ -28,6 +29,9 @@ export class TestComponent  implements OnInit {
     this.progress = this.progress + 0.09;
     console.log('pregunta: ' + this.step);
     console.log('progreso: ' + this.progress);
+    if (this.step > 0) {
+      this.evaluar();
+    }
   }
 
   aumentarNo(){
@@ -36,6 +40,19 @@ export class TestComponent  implements OnInit {
     this.progress = this.progress + 0.09;
     console.log('pregunta: ' + this.step);
     console.log('progreso: ' + this.progress);
+    if (this.step > 0) {
+      this.evaluar();
+    }
+  }
+
+  evaluar(){
+    if(this.step == 12 && this.si <=4){
+      this.res = 1;
+    }else if( this.step == 12 && this.si >4 && this.si <=8){
+      this.res = 2;
+    }else if( this.step == 12 && this.si >8){
+      this.res = 3;
+    }
   }
 
 }
