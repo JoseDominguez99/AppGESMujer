@@ -24,4 +24,7 @@
     --color: #00035f; /* Color del texto/icono */
 }
 
-
+.sin-subrayado {
+    text-decoration: none; /* quita el subrayado */
+    color: inherit; /* hereda el color del texto del padre */
+}
