@@ -46,7 +46,7 @@ export class ColectivoPage implements OnInit {
   async abrirTest(){
     const modal = await this.modalCtrl.create({
       component: TestComponent,
-      initialBreakpoint:  .8,
+      initialBreakpoint:  .9,
       mode: 'md',
       showBackdrop: true,
       backdropDismiss: false,
