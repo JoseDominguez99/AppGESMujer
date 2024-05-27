@@ -69,10 +69,13 @@
 }
 
 .cardsContent {
-  font-size: 18px;
+  font-size: 15px;
   color: black;
 }
-
+.cardsContent11 {
+  font-size: 15px;
+  color: black;
+}
 .cards1 {
   border-radius: 10px;
   box-shadow: -4px 8px 10px rgba(0, 0, 0, 0.1); /* Horizontal | Vertical | Desenfoque | Color */
@@ -98,7 +101,7 @@
   border-top-left-radius: 10px; /* Redondea la esquina superior izquierda */
   border-top-right-radius: 10px; /* Redondea la esquina superior derecha */
   z-index: 1; /* Asegura que el título esté sobre la imagen */
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold; /* Cambiado de font-style a font-weight */
 }
 
@@ -121,4 +124,23 @@
 
 .swiper-slide-active .cards1 {
   transform: rotate(0deg); /* Alinear la tarjeta activa */
+}
+
+.card {
+  cursor: pointer;
+  width: 300px;
+  height: 550px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  border: 1px solid rgba(182, 80, 225, 0.2);
+  transition: all .2s;
+  box-shadow: 12px 12px 2px 1px rgba(94, 24, 175, 0.2);
+}
+
+.card:hover {
+  box-shadow: -12px 12px 2px -1px rgba(94, 24, 175, 0.2);
+}
+.scrollable-content {
+  max-height: 300px; /* Altura máxima para activar el scroll */
+  overflow-y: auto; /* Habilitar scroll vertical si el contenido excede la altura */
 }
