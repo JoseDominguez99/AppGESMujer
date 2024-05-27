@@ -17,11 +17,10 @@ export class ColectivoPage implements OnInit {
     si: '',
     no: ''
   }
-
   constructor(
     private modalCtrl: ModalController,
     private firestore: AngularFirestore,
-    private auth: AngularFireAuth) { 
+    private auth: AngularFireAuth,) { 
     }
 
   ngOnInit() {
@@ -53,4 +52,6 @@ export class ColectivoPage implements OnInit {
     });
     return await modal.present();
   }
+
+  
 }

@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { IonicModule } from '@ionic/angular';
 import { TestComponent } from './test/test.component';
+import { ViolentometroComponent } from './violentometro/violentometro.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    TestComponent
+    TestComponent,
+    ViolentometroComponent
     
   ],
   imports: [

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ViolentometroComponent } from 'src/app/components/violentometro/violentometro.component';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-prevencion',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrevencionPage implements OnInit {
 
-  constructor() { }
+  constructor(private modalCtrl: ModalController) { }
 
   ngOnInit() {
+  }
+
+  async abrirTest(){
+    const modal = await this.modalCtrl.create({
+      component: ViolentometroComponent,
+      initialBreakpoint:  .9,
+      mode: 'md',
+      showBackdrop: true,
+      backdropDismiss: false,
+    });
+    return await modal.present();
   }
 
 }

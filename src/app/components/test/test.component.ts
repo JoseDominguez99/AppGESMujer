@@ -29,7 +29,7 @@ export class TestComponent  implements OnInit {
     private modalCtrl: ModalController,
     private auth: AngularFireAuth, 
     private firestore: AngularFirestore,
-    private toastCtrl: ToastController) {
+    private toastCtrl: ToastController,) {
     }
 
   ngOnInit() {
