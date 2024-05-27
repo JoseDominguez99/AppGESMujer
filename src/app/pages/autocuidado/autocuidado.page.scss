@@ -6,12 +6,12 @@ h1{
     text-shadow: -4px 2px 10px #ABB8C3;
 }
 
-.piensa{
+.piensa {
     position: absolute !important;
     left: 24% !important;
     right: 24%;
-    top: 32%;
-    font-size: 18px;
+    top: 35%;
+    font-size: 16px; /* Aquí puedes ajustar el tamaño de la letra */
     color: #20B2AA;
     z-index: 1;
 }
