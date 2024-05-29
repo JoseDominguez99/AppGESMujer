@@ -381,9 +381,37 @@
           <h1>¡TEN CUIDADO!</h1>
           <h3>LA VIOLENCIA AUMENTARÁ</h3>
           <div class="termocontainer">
-              <ion-progress-bar class="termometro" value="0.6" direction="vertical"></ion-progress-bar>
+            <div class="labels-container">
+              <div class="label" color="warning">Bromas hirientes</div>
+              <div class="label" color="warning">Ignorar / Ley del hielo</div>
+              <div class="label" color="warning">Celaos excesivos</div>
+              <div class="label">Ridiculizar/Humillar</div>
+              <div class="label">Amenazas</div>
+              <div class="label">Control/Prohibición</div>
+              <div class="label">Golpes/Empujones/Patadas</div>
+              <div class="label">Encerrar/Aislar</div>
+              <div class="label">Amenazar con armas</div>
+              <div class="label">Forzar una relación sexual</div>
+              <div class="label">Violación</div>
+              <div class="label">Temor por tu vida</div>
+            </div>
+            <ion-progress-bar class="termometro" [value]="violencia" [ngStyle]="{'--progress-background': progressBarColor}"></ion-progress-bar>
+            <div class="labels-container">
+              <div class="label">0</div>
+              <div class="label">1</div>
+              <div class="label">2</div>
+              <div class="label">3</div>
+              <div class="label">4</div>
+              <div class="label">5</div>
+              <div class="label">6</div>
+              <div class="label">7</div>
+              <div class="label">8</div>
+              <div class="label">9</div>
+              <div class="label">10</div>
+              <div class="label">11</div>
+              <div class="label">12</div>
+            </div>
           </div>
-        
           <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()">
             Guardar resultado
           </ion-button>
@@ -393,6 +421,38 @@
       <ion-row *ngIf="res === 2" class="ion-text-center ion-padding">
         <ion-col size="12">
           <h1>¡BUSCA AYUDA!</h1>
+          <div class="termocontainer">
+            <div class="labels-container">
+              <div class="label">Bromas hirientes</div>
+              <div class="label">Ignorar / Ley del hielo</div>
+              <div class="label">Celaos excesivos</div>
+              <div class="label">Ridiculizar/Humillar</div>
+              <div class="label">Amenazas</div>
+              <div class="label">Control/Prohibición</div>
+              <div class="label">Golpes/Empujones/Patadas</div>
+              <div class="label">Encerrar/Aislar</div>
+              <div class="label">Amenazar con armas</div>
+              <div class="label">Forzar una relación sexual</div>
+              <div class="label">Violación</div>
+              <div class="label">Temor por tu vida</div>
+            </div>
+            <ion-progress-bar class="termometro" [value]="violencia" [ngStyle]="{'--progress-background': progressBarColor}"></ion-progress-bar>
+            <div class="labels-container">
+              <div class="label">0</div>
+              <div class="label">1</div>
+              <div class="label">2</div>
+              <div class="label">3</div>
+              <div class="label">4</div>
+              <div class="label">5</div>
+              <div class="label">6</div>
+              <div class="label">7</div>
+              <div class="label">8</div>
+              <div class="label">9</div>
+              <div class="label">10</div>
+              <div class="label">11</div>
+              <div class="label">12</div>
+            </div>
+          </div>
           <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()">
             Guardar resultado
           </ion-button>
@@ -402,6 +462,38 @@
       <ion-row *ngIf="res === 3" class="ion-text-center ion-padding">
         <ion-col size="12">
           <h1>¡REACCIONA!</h1>
+          <div class="termocontainer">
+            <div class="labels-container">
+              <div class="label">Bromas hirientes</div>
+              <div class="label">Ignorar / Ley del hielo</div>
+              <div class="label">Celaos excesivos</div>
+              <div class="label">Ridiculizar/Humillar</div>
+              <div class="label">Amenazas</div>
+              <div class="label">Control/Prohibición</div>
+              <div class="label">Golpes/Empujones/Patadas</div>
+              <div class="label">Encerrar/Aislar</div>
+              <div class="label">Amenazar con armas</div>
+              <div class="label">Forzar una relación sexual</div>
+              <div class="label">Violación</div>
+              <div class="label">Temor por tu vida</div>
+            </div>
+            <ion-progress-bar class="termometro" [value]="violencia" [ngStyle]="{'--progress-background': progressBarColor}"></ion-progress-bar>
+            <div class="labels-container">
+              <div class="label">0</div>
+              <div class="label">1</div>
+              <div class="label">2</div>
+              <div class="label">3</div>
+              <div class="label">4</div>
+              <div class="label">5</div>
+              <div class="label">6</div>
+              <div class="label">7</div>
+              <div class="label">8</div>
+              <div class="label">9</div>
+              <div class="label">10</div>
+              <div class="label">11</div>
+              <div class="label">12</div>
+            </div>
+          </div>
           <h1>ES URGENTE DETENER ESTA SITUACIÓN</h1>
           <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()">
             Guardar resultado
