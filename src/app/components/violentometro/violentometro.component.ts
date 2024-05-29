@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { User } from '@firebase/auth-types';
+import { AngularFirestore} from '@angular/fire/compat/firestore';
+import { ToastController } from '@ionic/angular';
+
 
 
 @Component({
@@ -8,6 +13,7 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./violentometro.component.scss'],
 })
 export class ViolentometroComponent  implements OnInit {
+  userMail: string | null = null;
   
   public progress = 0;
   public violencia = 0;
@@ -21,9 +27,23 @@ export class ViolentometroComponent  implements OnInit {
     no: ''
   }
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(
+    private modalCtrl: ModalController,
+    private auth: AngularFireAuth, 
+    private firestore: AngularFirestore,
+    private toastCtrl: ToastController,) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.auth.authState.subscribe((user: User | null) =>{
+      if(user){
+        this.userMail = user.email;
+        console.log(this.userMail);
+        
+      }else{
+        this.userMail = null;
+      }
+    });
+  }
 
   async closeModal() {
     await this.modalCtrl.dismiss({
@@ -82,7 +102,26 @@ export class ViolentometroComponent  implements OnInit {
 
 
   guardarResultado(){
+    this.firestore.collection('violentometro').add({
+      correo: this.userMail,
+      respuestas_Si: this.si,
+      respuestas_No: this.no,
+    }).then(()=>{
+      this.mostrarToast('Datos guardados correctamente');
 
+    }).catch(error => {
+      this.mostrarToast('Error al registrar tus datos')
+    });
+  }
+
+  async mostrarToast(mensaje: string) {
+    const toast = await this.toastCtrl.create({
+      message: mensaje,
+      duration: 2000, 
+      position: 'bottom',
+      animated: true,
+    });
+    toast.present();
   }
 
 }
