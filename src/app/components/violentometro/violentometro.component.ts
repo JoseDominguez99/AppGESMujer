@@ -8,6 +8,7 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./violentometro.component.scss'],
 })
 export class ViolentometroComponent  implements OnInit {
+  
   public progress = 0;
   step = 1;
   si = 0;
@@ -31,7 +32,7 @@ export class ViolentometroComponent  implements OnInit {
   aumentarSi(){
     this.step += 1;
     this.si += 1;
-    this.progress = this.progress + 0.068;
+    this.progress = this.progress + 0.06;
     console.log('pregunta: ' + this.step);
     console.log('progreso: ' + this.progress);
     if (this.step > 0) {
@@ -51,13 +52,17 @@ export class ViolentometroComponent  implements OnInit {
   }
 
   evaluar(){
-    if(this.step == 14 && this.si <=4){
+    if(this.step == 13 && this.si <=3){
       this.res = 1;
-    }else if( this.step == 14 && this.si >4 && this.si <=8){
+    }else if( this.step == 13 && this.si >3 && this.si <=8){
       this.res = 2;
-    }else if( this.step == 14 && this.si >8){
+    }else if( this.step == 13 && this.si >8){
       this.res = 3;
     }
+  }
+
+  guardarResultado(){
+
   }
 
 }

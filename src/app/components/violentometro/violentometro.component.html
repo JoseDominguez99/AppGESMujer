@@ -137,7 +137,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="12">
-            <h2>¿Te han ridiculizado o humillado en público?</h2>
+            <h2>¿Te han amenazado con consecuencias si no haces algo?</h2>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -166,7 +166,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="12">
-            <h2>¿Te han amenazado con consecuencias si no haces algo?</h2>
+            <h2>¿Han intentado controlar tus actividades o decisiones?</h2>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -195,7 +195,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="12">
-            <h2>¿Han intentado controlar tus actividades o decisiones?</h2>
+            <h2>¿Te has sentido empujado, golpeado o dado patadas?</h2>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -224,7 +224,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="12">
-            <h2>¿Te has sentido empujado, golpeado o dado patadas?</h2>
+            <h2>¿Te has sentido encerrado o aislado contra tu voluntad?</h2>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -253,7 +253,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="12">
-            <h2>¿Te has sentido encerrado o aislado contra tu voluntad?</h2>
+            <h2>¿Te has sentido amenazado con objetos o armas?</h2>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -282,7 +282,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="12">
-            <h2>¿Te has sentido amenazado con objetos o armas?</h2>
+            <h2>¿Has sido víctima de abuso sexual o violación?</h2>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -311,7 +311,7 @@
         </ion-row>
         <ion-row>
           <ion-col size="12">
-            <h2>¿Has sido víctima de abuso sexual o violación?</h2>
+            <h2>¿Te han forzado a tener una relación sexual?</h2>
           </ion-col>
         </ion-row>
         <ion-row>
@@ -340,35 +340,6 @@
         </ion-row>
         <ion-row>
           <ion-col size="12">
-            <h2>¿Te han forzado a tener una relación sexual?</h2>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="6">
-            <ion-button expand="in-block" fill="outline" color="danger" (click)="aumentarSi()">
-              SI
-            </ion-button>
-          </ion-col>
-          <ion-col size="6">
-            <ion-button expand="in-block" fill="outline" color="success" (click)="aumentarNo()">
-              NO
-            </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
-  <!-- Pregunta 13 -->
-  <ion-card class="ion-text-center cards" *ngIf="step === 13">
-    <ion-card-content>
-      <ion-grid fixed>
-        <ion-row>
-          <ion-col size="12">
-            <ion-progress-bar [value]="progress"></ion-progress-bar>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col size="12">
             <h2>¿Has sentido temor por tu vida debido a amenazas de asesinato?</h2>
           </ion-col>
         </ion-row>
@@ -388,5 +359,55 @@
     </ion-card-content>
   </ion-card>
 
-  
+  <ion-card *ngIf="step == 13" class="ion-text-center cards">
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="6" class="ion-padding">
+          <ion-title class="titulo" color="success">TOTAL SI</ion-title>
+          <ion-chip color="success" mode="ios" outline="true">
+            <ion-label>{{si}}</ion-label>
+          </ion-chip>
+        </ion-col>
+        <ion-col size="6" class="ion-padding">
+          <ion-title class="titulo" color="danger">TOTAL NO</ion-title>
+          <ion-chip color="danger" mode="ios" outline="true">
+            <ion-label>{{no}}</ion-label>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="res === 1" class="ion-text-center ion-padding">
+        <ion-col size="12">
+          <h1>¡TEN CUIDADO!</h1>
+          <h3>LA VIOLENCIA AUMENTARÁ</h3>
+          <div class="termocontainer">
+              <ion-progress-bar class="termometro" value="0.6" direction="vertical"></ion-progress-bar>
+          </div>
+        
+          <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()">
+            Guardar resultado
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="res === 2" class="ion-text-center ion-padding">
+        <ion-col size="12">
+          <h1>¡BUSCA AYUDA!</h1>
+          <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()">
+            Guardar resultado
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="res === 3" class="ion-text-center ion-padding">
+        <ion-col size="12">
+          <h1>¡REACCIONA!</h1>
+          <h1>ES URGENTE DETENER ESTA SITUACIÓN</h1>
+          <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()">
+            Guardar resultado
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
 </ion-content>
