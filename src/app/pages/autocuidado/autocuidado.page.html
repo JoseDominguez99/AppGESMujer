@@ -30,15 +30,20 @@
         propia fuerza, mi sensualidad,
         mi desfachatez, en fin, mi
         libertad”. </p>
-      <img src="../../../assets/Imagen2.png" style="max-width: 60%; max-height: 60%;" class="globo">
+      <img src="../../../assets/Imagen2.png" style="max-width: 60%; max-height: 60%;" class="">
       <img src="../../../assets/Imagen1.png" alt="">
 
       <p>En esta clave resaltamos los siguientes puntos a tomar en cuenta en el cuidado de la salud física:</p>
 
-        <img src="../../../assets/Imagen3.png" alt="" class="cardsInfo">
+      <div class="image-container">
+        <img src="../../../assets/act.png" alt="" class="cardsInfo">
+        <img src="../../../assets/sasex.png" alt="" class="cardsInfo">
+      </div>      
+
   </div>
 
-  <div *ngIf="seleccion === 'Emocional'">
+  <div *ngIf="seleccion === 'Emocional'" class="ion-text-center ion-padding">
+    <h1>AUTOCUIDADO EMOCIONAL Y MENTAL</h1>
     <p class="ion-text-justify ion-padding">Conecto con mis emociones: Libero
       mi voz y mi fuerza para sanarme,
       expreso asertivamente lo que pienso, siento y quiero. Me permito ser
@@ -47,7 +52,8 @@
       ayuda y me dejo ayudar.</p>
   </div>
 
-  <div *ngIf="seleccion === 'Laboral'">
+  <div *ngIf="seleccion === 'Laboral'" class="ion-text-center ion-padding">
+    <h1>AUTOCUIDADO LABORAL</h1>
     <p class="ion-text-justify ion-padding">Equilibrio mi activismo, mi
       vida personal y laboral: Participo
       en redes basadas en la filosofía
@@ -59,7 +65,8 @@
       vacaciones y días festivos. </p>
   </div>
 
-  <div *ngIf="seleccion === 'Digital'">
+  <div *ngIf="seleccion === 'Digital'" class="ion-text-center ion-padding">
+    <h1>AUTOCUIDADO DIGITAL</h1>
     <p class="ion-text-justify ion-padding">Cuido mi seguridad digital:
       Hago uso estratégico de la
       tecnología, plataformas digitales,
