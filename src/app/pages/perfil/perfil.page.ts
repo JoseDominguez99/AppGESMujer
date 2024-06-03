@@ -5,6 +5,8 @@ import { User } from '@firebase/auth-types';
 import { AngularFirestore} from '@angular/fire/compat/firestore';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { finalize } from 'rxjs';
+import { NetworkService } from 'src/app/services/network.service';
+
 
 
 @Component({
@@ -26,7 +28,8 @@ export class PerfilPage implements OnInit {
     private router: Router, 
     private auth: AngularFireAuth, 
     private firestore: AngularFirestore, 
-    private storage: AngularFireStorage,){
+    private storage: AngularFireStorage,
+    public netService: NetworkService){
     this.auth.authState.subscribe((user: User | null) =>{
       if(user){
         this.userMail = user.email;
@@ -39,6 +42,7 @@ export class PerfilPage implements OnInit {
    }
 
   ngOnInit() {
+    this.netService.checkNetworkConnection2();
   }
 
   selectImage() {

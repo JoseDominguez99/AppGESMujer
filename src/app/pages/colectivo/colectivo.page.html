@@ -13,7 +13,7 @@
         Empezar test
     </ion-button>
     <br>
-    <ion-card class="cards">
+    <ion-card class="cards" *ngIf="netService.isConnected">
         <ion-card-content>
             <ion-grid fixed>
                 <ion-row class="ion-text-center">
@@ -33,4 +33,9 @@
             </ion-grid>
         </ion-card-content>
     </ion-card>
+    <ion-card class="cards" *ngIf="!netService.isConnected">
+      <ion-card-content>
+          <h1>NECESITAS CONEXIÓN A INTERNET PARA ACCEDER A LOS RESULTADOS DEL TEST</h1>
+      </ion-card-content>
+  </ion-card>
 </ion-content>

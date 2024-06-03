@@ -412,9 +412,10 @@
               <div class="label">12</div>
             </div>
           </div>
-          <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()">
+          <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()" *ngIf="netService.isConnected">
             Guardar resultado
           </ion-button>
+          <ion-label *ngIf="!netService.isConnected" color="danger">Accede a internet para registrar tus datos</ion-label>
         </ion-col>
       </ion-row>
 
@@ -453,9 +454,10 @@
               <div class="label">12</div>
             </div>
           </div>
-          <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()">
+          <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()" *ngIf="netService.isConnected">
             Guardar resultado
           </ion-button>
+          <ion-label *ngIf="!netService.isConnected" color="danger">Accede a internet para registrar tus datos</ion-label>
         </ion-col>
       </ion-row>
 
@@ -495,9 +497,10 @@
             </div>
           </div>
           <h1>ES URGENTE DETENER ESTA SITUACIÓN</h1>
-          <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()">
+          <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()" *ngIf="netService.isConnected">
             Guardar resultado
           </ion-button>
+          <ion-label *ngIf="!netService.isConnected" color="danger">Accede a internet para registrar tus datos</ion-label>
         </ion-col>
       </ion-row>
     </ion-grid>

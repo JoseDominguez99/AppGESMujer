@@ -1,6 +1,6 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay" side="end" *ngIf="isLoggedIn()">
+    <ion-menu contentId="main-content" type="overlay" side="end" *ngIf="shouldShowMenu()">
       <ion-header class="ion-header-secondary">
         <ion-toolbar color="secondary">
           <ion-avatar slot="end">
@@ -17,7 +17,7 @@
               <ion-label>{{ p.title }}</ion-label>
             </ion-item>
           </ion-menu-toggle>
-          <ion-item>
+          <ion-item *ngIf="netService.isConnected">
             <ion-label (click)="logout()">Cerrar sesión</ion-label>
           </ion-item>                             
         </ion-list>

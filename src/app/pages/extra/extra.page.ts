@@ -3,7 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { User } from '@firebase/auth-types';
 import { ToastController } from '@ionic/angular';
-
+import { NetworkService } from 'src/app/services/network.service';
 import { AngularFirestore} from '@angular/fire/compat/firestore';
 
 
@@ -22,7 +22,12 @@ export class ExtraPage implements OnInit {
     localidad: '',
   }
 
-  constructor(private router: Router, private auth: AngularFireAuth, private toastCtrl: ToastController, private firestore: AngularFirestore) {
+  constructor(
+    private router: Router, 
+    private auth: AngularFireAuth, 
+    private toastCtrl: ToastController, 
+    private firestore: AngularFirestore,
+    public netService: NetworkService) {
     this.auth.authState.subscribe((user: User | null) =>{
       if(user){
         this.userMail = user.email;
@@ -33,6 +38,7 @@ export class ExtraPage implements OnInit {
    }
 
   ngOnInit() {
+    this.netService.checkNetworkConnection2();
     this.firestore.collection('Users', ref => ref.where('Correo', '==', this.userMail)).valueChanges().subscribe((data: any[]) => {
       if (data.length > 0) {
         this.datos.nombre = data[0].Nombre;

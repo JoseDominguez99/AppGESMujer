@@ -23,8 +23,6 @@ export class InicioPage implements OnInit {
   mostrarRegistro: boolean = false;
   constructor(private firestore: AngularFirestore, private toastCtrl: ToastController,private router: Router, private authService: AuthService) { }
 
-
-
   toggleRegistrationForm() {
     this.mostrarRegistro = !this.mostrarRegistro;
   }

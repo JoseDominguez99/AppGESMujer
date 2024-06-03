@@ -31,13 +31,21 @@
                         </ion-card-subtitle>
                     </ion-card-header>
                     <ion-card-content class="ion-text-center">
-                        <h1><a 
+                        <h1>
+                        <a
+                            *ngIf="netService.isConnected" 
                             href="https://www.gesmujer.org/sitio/aceites-y-esencias-de-autocuidado/" 
                             target="_blank" 
                             rel="noopener noreferrer">
                             KIT DE SANACIÓN
                         </a>
-                        <p>*Necesitas conexión a internet</p></h1>
+                        <a 
+                            *ngIf="!netService.isConnected" 
+                            rel="noopener noreferrer">
+                            KIT DE SANACIÓN
+                        </a>
+                        </h1>
+                    <p *ngIf="netService.isConnected">*Necesitas conexión a internet</p>
                     </ion-card-content>
                 </ion-card>
             </ion-col>
@@ -52,12 +60,18 @@
                     </ion-card-header>
                     <ion-card-content class="ion-text-center">
                         <a 
+                            *ngIf="netService.isConnected"
                             href="https://open.spotify.com/playlist/4GOH937H2l5cSJ86g2sIdS?si=6LIcC63KRpOX5rzl3PTbHw&nd=1" 
                             target="_blank" 
                             rel="noopener noreferrer">
                             PLAYLIST "El mundo que soñamos" GESMujer
                         </a>
-                        <p>*Necesitas conexión a internet</p>
+                        <a 
+                            *ngIf="!netService.isConnected"
+                            rel="noopener noreferrer">
+                            PLAYLIST "El mundo que soñamos" GESMujer
+                        </a>
+                        <p *ngIf="netService.isConnected">*Necesitas conexión a internet</p>
                     </ion-card-content>
                 </ion-card>
             </ion-col>
@@ -111,8 +125,14 @@
                         </ion-card-subtitle>
                     </ion-card-header>
                     <ion-card-content class="ion-text-center">
-                        <a href="https://www.youtube.com/watch?v=Mh_6c5l4rM0&feature=youtu.be" 
+                    <a
+                        *ngIf="netService.isConnected"
+                        href="https://www.youtube.com/watch?v=Mh_6c5l4rM0&feature=youtu.be" 
                         target="_blank" 
+                        rel="noopener noreferrer">RESPIRACIÓN PARA REDUCIR EL ESTRÉS
+                    </a>
+                        <a 
+                        *ngIf="!netService.isConnected"
                         rel="noopener noreferrer">RESPIRACIÓN PARA REDUCIR EL ESTRÉS</a>
                         <p>*Necesitas conexión a internet</p>
                     </ion-card-content>
@@ -126,9 +146,16 @@
                         </ion-card-subtitle>
                     </ion-card-header>
                     <ion-card-content class="ion-text-center">
-                        <a href="https://www.youtube.com/watch?v=VTBe8k0HKu8&feature=youtu.be" 
+                        <a
+                        *ngIf="netService.isConnected"
+                        href="https://www.youtube.com/watch?v=VTBe8k0HKu8&feature=youtu.be" 
                         target="_blank" 
-                        rel="noopener noreferrer">EJERCICIOS DE RELAJACIÓN</a>
+                        rel="noopener noreferrer">EJERCICIOS DE RELAJACIÓN
+                        </a>
+                        <a
+                        *ngIf="!netService.isConnected"
+                        rel="noopener noreferrer">EJERCICIOS DE RELAJACIÓN
+                        </a>
                         <p>*Necesitas conexión a internet</p>
                     </ion-card-content>
                 </ion-card>
@@ -141,8 +168,13 @@
                         </ion-card-subtitle>
                     </ion-card-header>
                     <ion-card-content class="ion-text-center">
-                        <a href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.gesmujer.org%2Fsitio%2Fwp-content%2Fuploads%2F2023%2F07%2F07.-Dercarga-Formato-de-Agenda.docx&wdOrigin=BROWSELINK" 
+                        <a 
+                        *ngIf="netService.isConnected"
+                        href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.gesmujer.org%2Fsitio%2Fwp-content%2Fuploads%2F2023%2F07%2F07.-Dercarga-Formato-de-Agenda.docx&wdOrigin=BROWSELINK" 
                         target="_blank" 
+                        rel="noopener noreferrer">FORMATO PARA AGENDA</a>
+                        <a 
+                        *ngIf="!netService.isConnected"
                         rel="noopener noreferrer">FORMATO PARA AGENDA</a>
                         <p>*Necesitas conexión a internet</p>
                     </ion-card-content>
@@ -156,8 +188,13 @@
                         </ion-card-subtitle>
                     </ion-card-header>
                     <ion-card-content class="ion-text-center">
-                        <a href="https://www.gesmujer.org/sitio/wp-content/uploads/2023/07/08.-Plan-de-Autocuidado-Individual.pdf" 
+                        <a 
+                        *ngIf="netService.isConnected"
+                        href="https://www.gesmujer.org/sitio/wp-content/uploads/2023/07/08.-Plan-de-Autocuidado-Individual.pdf" 
                         target="_blank" 
+                        rel="noopener noreferrer">PLAN DE AUTOCUIDADO</a>
+                        <a 
+                        *ngIf="!netService.isConnected"
                         rel="noopener noreferrer">PLAN DE AUTOCUIDADO</a>
                         <p>*Necesitas conexión a internet</p>
                     </ion-card-content>
@@ -171,8 +208,13 @@
                         </ion-card-subtitle>
                     </ion-card-header>
                     <ion-card-content class="ion-text-center">
-                        <a href="https://www.gesmujer.org/sitio/wp-content/uploads/2023/07/10.-Pasos-para-expresar-lo-que-siento.pdf" 
+                        <a 
+                        *ngIf="netService.isConnected"
+                        href="https://www.gesmujer.org/sitio/wp-content/uploads/2023/07/10.-Pasos-para-expresar-lo-que-siento.pdf" 
                         target="_blank" 
+                        rel="noopener noreferrer">COMUNICACIÓN ASERTIVA</a>
+                        <a 
+                        *ngIf="!netService.isConnected"
                         rel="noopener noreferrer">COMUNICACIÓN ASERTIVA</a>
                         <p>*Necesitas conexión a internet</p>
                     </ion-card-content>

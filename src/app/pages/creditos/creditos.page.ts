@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NetworkService } from 'src/app/services/network.service';
 
 @Component({
   selector: 'app-creditos',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreditosPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public netService: NetworkService
+  ) { }
 
   ngOnInit() {
+    this.netService.checkNetworkConnection2();
   }
 
 }
