@@ -4,6 +4,7 @@ import { TestComponent } from 'src/app/components/test/test.component';
 import { AngularFirestore} from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { User } from '@firebase/auth-types';
+import { NetworkService } from 'src/app/services/network.service';
 
 
 @Component({
@@ -20,10 +21,12 @@ export class ColectivoPage implements OnInit {
   constructor(
     private modalCtrl: ModalController,
     private firestore: AngularFirestore,
-    private auth: AngularFireAuth,) { 
+    private auth: AngularFireAuth,
+    public netService: NetworkService) { 
     }
 
   ngOnInit() {
+    this.netService.checkNetworkConnection2();
     this.auth.authState.subscribe((user: User | null) =>{
       if(user){
         this.userMail = user.email;

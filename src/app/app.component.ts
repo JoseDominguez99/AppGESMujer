@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { User } from '@firebase/auth-types';
 import { Platform } from '@ionic/angular';
+import { NetworkService } from './services/network.service';
 
 
 @Component({
@@ -24,7 +25,12 @@ export class AppComponent {
     { title: 'Ayúdanos a crecer', url: '/extra', icon: 'id-card' },
   ];
 
-  constructor(private auth: AngularFireAuth, private router: Router, private platform: Platform) {
+  constructor(
+    private auth: AngularFireAuth,
+    private router: Router, 
+    private platform: Platform,
+    public netService: NetworkService
+  ) {
     this.initializeApp();
     this.auth.authState.subscribe((user: User | null) =>{
       if(user){
@@ -38,15 +44,19 @@ export class AppComponent {
     this.platform.ready().then(() => {
       document.body.classList.remove('dark'); // Asegura que la clase dark se elimina del body
       document.body.setAttribute('data-theme', 'light');
+      this.netService.checkNetworkConnection();
     });
   }
   isLoggedIn(): boolean {
     return !!this.userMail;
   }
+
+  shouldShowMenu(): boolean {
+    return this.isLoggedIn() || !this.netService.isConnected;
+  }
+  
   logout(): void {
     this.auth.signOut();
     this.router.navigate(['/inicio']);
-
   }
-  
 }

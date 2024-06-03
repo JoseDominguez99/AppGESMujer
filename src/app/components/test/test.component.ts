@@ -4,6 +4,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { User } from '@firebase/auth-types';
 import { AngularFirestore} from '@angular/fire/compat/firestore';
 import { ToastController } from '@ionic/angular';
+import { NetworkService } from 'src/app/services/network.service';
 
 
 @Component({
@@ -29,10 +30,12 @@ export class TestComponent  implements OnInit {
     private modalCtrl: ModalController,
     private auth: AngularFireAuth, 
     private firestore: AngularFirestore,
-    private toastCtrl: ToastController,) {
+    private toastCtrl: ToastController,
+    public netService: NetworkService) {
     }
 
   ngOnInit() {
+    this.netService.checkNetworkConnection2();
     this.auth.authState.subscribe((user: User | null) =>{
       if(user){
         this.userMail = user.email;

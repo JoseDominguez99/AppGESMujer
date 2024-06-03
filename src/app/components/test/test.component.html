@@ -360,9 +360,11 @@
             situación siguiendo las pautas de
             autocuidado que te proponemos en
             esta guía.</p>
-            <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()">
+            <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()" *ngIf="netService.isConnected">
               Guardar resultado
             </ion-button>
+            <ion-label *ngIf="!netService.isConnected" color="danger">Accede a internet para registrar tus datos</ion-label>
+            
         </ion-col>
       </ion-row>
 
@@ -381,9 +383,11 @@
             de relajación y recreación. En este
             manual te proponemos algunas
             técnicas</p>
-            <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()">
+            <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()" *ngIf="netService.isConnected">
               Guardar resultado
             </ion-button>
+            <ion-label *ngIf="!netService.isConnected" color="danger">Accede a internet para registrar tus datos</ion-label>
+
         </ion-col>
       </ion-row>
 
@@ -407,9 +411,10 @@
             son tu responsabilidad y por tanto
             tratas de mantener hábitos de vida
             saludable</p>
-            <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()">
+            <ion-button expand="in-block" fill="outline" color="secondary" (click)="guardarResultado()" *ngIf="netService.isConnected">
               Guardar resultado
             </ion-button>
+            <ion-label *ngIf="!netService.isConnected" color="danger">Accede a internet para registrar tus datos</ion-label>
         </ion-col>
       </ion-row>
     </ion-grid>

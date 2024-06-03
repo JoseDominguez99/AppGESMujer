@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DescargasService } from 'src/app/services/descargas.service';
 import { ToastController } from '@ionic/angular';
+import { NetworkService } from 'src/app/services/network.service';
 
 @Component({
   selector: 'app-botiquin',
@@ -16,12 +17,13 @@ export class BotiquinPage implements OnInit {
   constructor(
     private router: Router,
     private descarga: DescargasService,
-    private toastCtrl: ToastController) { 
-    
+    private toastCtrl: ToastController,
+    public netService: NetworkService) { 
   }
 
 
   ngOnInit() {
+    this.netService.checkNetworkConnection2();
     this.audio = new Audio();
     this.audio.src = '../../assets/meditacion.mp3';
     this.audio.load();
