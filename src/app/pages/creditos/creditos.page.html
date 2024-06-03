@@ -39,7 +39,7 @@
                         <ion-label></ion-label>
                     </ion-list-header>
 
-    <div class="card" >
+    <div class="card" *ngIf="netService.isConnected">
     <span>Contactanos</span>
     <a class="social-link" href="https://x.com/GES_Mujer">
         <ion-icon color="dark" name="logo-twitter"></ion-icon>
@@ -52,13 +52,34 @@
     </a>
     <a class="social-link" href="https://www.youtube.com/c/GESMujerRosarioCastellanos?app=desktop">
         <ion-icon  color="dark" name="logo-youtube"></ion-icon>
-        </a>
-        <a class="social-link" href="https://www.tiktok.com/@gesmujer">
+    </a>
+    <a class="social-link" href="https://www.tiktok.com/@gesmujer">
         <ion-icon  color="dark" name="logo-tiktok"></ion-icon>
-        </a>
-        <a class="social-link" href="https://soundcloud.com/gesmujerac">
+    </a>
+    <a class="social-link" href="https://soundcloud.com/gesmujerac">
         <ion-icon  color="dark" name="logo-soundcloud"></ion-icon>
+    </a>
+    </div>
+    <div class="card" *ngIf="!netService.isConnected">
+    <span>Contactanos</span>
+    <a class="social-link" href="https://x.com/GES_Mujer">
+        <ion-icon color="dark" name="logo-twitter"></ion-icon>
         </a>
+    <a class="social-link" href="https://www.facebook.com/gesmujer.rosario.castellanos.ac?locale=es_LA">
+        <ion-icon color="dark" name="logo-facebook"></ion-icon>
+    </a>
+    <a class="social-link" href="https://www.instagram.com/ges_mujer/?hl=es">
+        <ion-icon  color="dark" name="logo-instagram"></ion-icon>
+    </a>
+    <a class="social-link" href="https://www.youtube.com/c/GESMujerRosarioCastellanos?app=desktop">
+        <ion-icon  color="dark" name="logo-youtube"></ion-icon>
+    </a>
+    <a class="social-link" href="https://www.tiktok.com/@gesmujer">
+        <ion-icon  color="dark" name="logo-tiktok"></ion-icon>
+    </a>
+    <a class="social-link" href="https://soundcloud.com/gesmujerac">
+        <ion-icon  color="dark" name="logo-soundcloud"></ion-icon>
+    </a>
     </div>
 
 
