@@ -8,6 +8,7 @@ import { AutocuidadoPageRoutingModule } from './autocuidado-routing.module';
 
 import { AutocuidadoPage } from './autocuidado.page';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   imports: [
@@ -17,6 +18,8 @@ import { ComponentsModule } from 'src/app/components/components.module';
     AutocuidadoPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [AutocuidadoPage]
+  declarations: [AutocuidadoPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
 })
 export class AutocuidadoPageModule {}

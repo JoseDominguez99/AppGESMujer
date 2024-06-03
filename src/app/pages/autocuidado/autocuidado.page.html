@@ -35,12 +35,96 @@
 
       <p>En esta clave resaltamos los siguientes puntos a tomar en cuenta en el cuidado de la salud física:</p>
 
-      <div class="image-container">
-        <img src="../../../assets/act.png" alt="" class="cardsInfo">
-        <img src="../../../assets/sasex.png" alt="" class="cardsInfo">
-      </div>      
+      <div>
+        <ion-row>
+          <ion-col size="12">
+            <swiper-container
+              class="swiperCard"
+              effect="coverflow"
+              [centeredSlides]="true"
+              [slidesPerView]="'auto'"
+              [coverflowEffect]="{rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: true}">
+              <swiper-slide>
+                <ion-card class="card2">
+                  <div class="icon-container">
+                    <ion-icon name="accessibility"></ion-icon>
+                </div>
+                    <ion-card-tittle class="name">La activación física</ion-card-tittle>
+                    <ion-label class="message">
+                        Constituye parte esencial para lograr bienestar general.
+                        La OMS define la actividad física como cualquier movimiento corporal producido por los músculos
+                        esqueléticos, incluye cualquier actividad diaria como trabajar, jugar, viajar y las actividades recreativas.
+                        </ion-label>
+                        <p>1/5</p>
+                </ion-card>
+            </swiper-slide>
 
+            <swiper-slide>
+              <ion-card class="card2">
+                <div class="icon-container">
+                  <ion-icon name="heart-circle"></ion-icon>
+              </div>
+                  <ion-card-tittle class="name">La salud sexual y reproductiva</ion-card-tittle>
+                  <ion-label class="message">
+                      Es un estado general de estado físico, mental y social en todos los aspectos relacionados con el sitema reproctivo (UNFPA). Requiere un esfoque positivo y respetuoso de la secualidad y las relaciones sexuales, así como la responsabilidad de tener experiencias sexuales placenteras y seguras, libres de coacción, discriminacion y violencia (OMS)
+                      </ion-label>
+                      <p>2/5</p>
+              </ion-card>
+          </swiper-slide>
+
+            <swiper-slide>
+            <ion-card class="card2">
+              <div class="icon-container">
+                <ion-icon name="restaurant"></ion-icon>
+            </div>
+                <ion-card-tittle class="name">La nutrición saludable</ion-card-tittle>
+                <ion-label class="message"> 
+                    consiste en consumir los alimentos de manera consiente , sin prisa, en ambuente agradable, sin saltarse alguna comida principal 
+                    </ion-label>
+                    <p>3/5</p>
+            </ion-card>
+          </swiper-slide>
+
+            <swiper-slide>
+          <ion-card class="card2">
+            <div class="icon-container">
+              <ion-icon name="bed"></ion-icon>
+          </div>
+              <ion-card-tittle class="name">Un descanso y el sueño</ion-card-tittle>
+              <ion-label class="message">
+                  Constituye parte esencial para lograr bienestar general.
+                  La OMS define la actividad física como cualquier movimiento corporal producido por los músculos
+                  esqueléticos, incluye cualquier actividad diaria como trabajar, jugar, viajar y las actividades recreativas.
+                  </ion-label>
+                  <p>4/5</p>
+          </ion-card>
+          </swiper-slide>
+
+            <swiper-slide>
+        <ion-card class="card2">
+          <div class="icon-container">
+            <ion-icon name="sunny"></ion-icon>
+        </div>
+            <ion-card-tittle class="name">Los rituales de sanación</ion-card-tittle>
+            <ion-label class="message">
+                Constituye parte esencial para lograr bienestar general.
+                La OMS define la actividad física como cualquier movimiento corporal producido por los músculos
+                esqueléticos, incluye cualquier actividad diaria como trabajar, jugar, viajar y las actividades recreativas.
+                </ion-label>
+                <p>5/5</p>
+        </ion-card>
+          </swiper-slide>
+
+            </swiper-container> <!-- Se cerró swiper-container aquí -->
+          </ion-col>
+        </ion-row>
+      </div>
+      
   </div>
+
+
+  
+
 
   <div *ngIf="seleccion === 'Emocional'" class="ion-text-center ion-padding">
     <h1>AUTOCUIDADO EMOCIONAL Y MENTAL</h1>
