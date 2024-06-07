@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore, DocumentData} from '@angular/fire/compat/firestore';
 import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
@@ -23,7 +22,6 @@ export class InicioPage implements OnInit {
 
   mostrarRegistro: boolean = false;
   constructor(
-    private firestore: AngularFirestore, 
     private toastCtrl: ToastController,
     private router: Router, 
     private authService: AuthService,
