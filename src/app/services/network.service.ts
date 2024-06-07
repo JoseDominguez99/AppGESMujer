@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class NetworkService {
 
   public isConnected: boolean = true;
+  public isInvited: boolean = false;
 
   constructor(
     private platform: Platform,

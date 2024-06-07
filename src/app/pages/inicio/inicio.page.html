@@ -35,9 +35,11 @@
           <ion-button shape="round" (click)="login()" color="light">
             Iniciar
           </ion-button>
-          <ion-label (click)="toggleRegistrationForm()">
-            <p>¿No tienes una cuneta?Regístrate</p>
+          <br>
+          <ion-label color="light" (click)="toggleRegistrationForm()">
+            Crear una cuenta
           </ion-label>
+          <br>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -90,10 +92,19 @@
         <ion-button shape="round" (click)="registro()" color="light">
           Registrarse
         </ion-button>
-        <ion-label (click)="toggleRegistrationForm()" color="light">
-          <p>Ya tengo una cuenta</p>
+        <br>
+        <ion-label color="light" (click)="toggleRegistrationForm()">
+          Ya tengo una cuenta
         </ion-label>
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <div class="divisor"></div>
+ 
+  <div class="ion-text-center">
+    <ion-button (click)="ingresarInvitado()" expand="in-block" fill="outline" color="light">
+      Ingresa como visitante
+    </ion-button>
+  </div>
 </ion-content>

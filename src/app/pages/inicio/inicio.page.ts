@@ -3,6 +3,7 @@ import { AngularFirestore, DocumentData} from '@angular/fire/compat/firestore';
 import { ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
+import { NetworkService } from 'src/app/services/network.service';
 
 
 @Component({
@@ -21,7 +22,13 @@ export class InicioPage implements OnInit {
   passwordToggleIcon: string = 'eye-off';
 
   mostrarRegistro: boolean = false;
-  constructor(private firestore: AngularFirestore, private toastCtrl: ToastController,private router: Router, private authService: AuthService) { }
+  constructor(
+    private firestore: AngularFirestore, 
+    private toastCtrl: ToastController,
+    private router: Router, 
+    private authService: AuthService,
+    public netService: NetworkService
+  ) { }
 
   toggleRegistrationForm() {
     this.mostrarRegistro = !this.mostrarRegistro;
@@ -74,5 +81,11 @@ export class InicioPage implements OnInit {
   verContrasena() {
     this.passwordType = this.passwordType === 'password' ? 'text' : 'password';
     this.passwordToggleIcon = this.passwordToggleIcon === 'eye-off' ? 'eye' : 'eye-off';
+  }
+
+  ingresarInvitado(){
+    this.netService.isInvited = true;
+    this.router.navigate(['/metodologias']);
+    this.mostrarToast('Ingresaste como visitante');
   }
 }

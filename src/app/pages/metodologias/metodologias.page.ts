@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { register } from 'swiper/element/bundle';
 import { SwiperOptions } from 'swiper/types';
+import { ModalController } from '@ionic/angular';
+import { IntroMetodologiasComponent } from 'src/app/intro-metodologias/intro-metodologias.component';
 
 register();
 
@@ -10,6 +12,10 @@ register();
   styleUrls: ['./metodologias.page.scss'],
 })
 export class MetodologiasPage implements OnInit {
+
+  constructor(private modalCtrl: ModalController) { }
+
+  
 
   swiperConfig: SwiperOptions = {
     effect: 'coverflow',
@@ -28,9 +34,15 @@ export class MetodologiasPage implements OnInit {
       clickable: true,
     },
   };
-  constructor() { }
 
   ngOnInit() {
+    this.mostrarModal();
+  }
+  async mostrarModal(){
+    const modal = await this.modalCtrl.create({
+      component: IntroMetodologiasComponent,
+    });
+    await modal.present();
   }
 
 }

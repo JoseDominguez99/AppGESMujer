@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { IonicModule } from '@ionic/angular';
 import { TestComponent } from './test/test.component';
 import { ViolentometroComponent } from './violentometro/violentometro.component';
+import { IntroMetodologiasComponent } from '../intro-metodologias/intro-metodologias.component';
 
 
 
@@ -11,8 +12,8 @@ import { ViolentometroComponent } from './violentometro/violentometro.component'
   declarations: [
     HeaderComponent,
     TestComponent,
-    ViolentometroComponent
-    
+    ViolentometroComponent,
+    IntroMetodologiasComponent
   ],
   imports: [
     CommonModule,
@@ -20,6 +21,7 @@ import { ViolentometroComponent } from './violentometro/violentometro.component'
   ],
   exports:[
     HeaderComponent,
+    IntroMetodologiasComponent
   ],
 })
 export class ComponentsModule { }

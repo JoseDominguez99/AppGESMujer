@@ -52,11 +52,14 @@ export class AppComponent {
   }
 
   shouldShowMenu(): boolean {
-    return this.isLoggedIn() || !this.netService.isConnected;
+    return this.isLoggedIn() || !this.netService.isConnected || this.netService.isInvited;
   }
   
   logout(): void {
     this.auth.signOut();
     this.router.navigate(['/inicio']);
+    this.netService.isInvited = false;
   }
+
+  
 }

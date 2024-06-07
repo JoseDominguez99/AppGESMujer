@@ -16,7 +16,7 @@ import { ComponentsModule } from 'src/app/components/components.module';
     FormsModule,
     IonicModule,
     MetodologiasPageRoutingModule,
-    ComponentsModule
+    ComponentsModule,
   ],
   declarations: [MetodologiasPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

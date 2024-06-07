@@ -6,6 +6,7 @@ import { AngularFirestore} from '@angular/fire/compat/firestore';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { finalize } from 'rxjs';
 import { NetworkService } from 'src/app/services/network.service';
+import { AlertController } from '@ionic/angular';
 
 
 
@@ -29,7 +30,8 @@ export class PerfilPage implements OnInit {
     private auth: AngularFireAuth, 
     private firestore: AngularFirestore, 
     private storage: AngularFireStorage,
-    public netService: NetworkService){
+    public netService: NetworkService,
+    private alertCtrl: AlertController){
     this.auth.authState.subscribe((user: User | null) =>{
       if(user){
         this.userMail = user.email;
@@ -43,6 +45,9 @@ export class PerfilPage implements OnInit {
 
   ngOnInit() {
     this.netService.checkNetworkConnection2();
+    if(this.netService.isInvited){
+      this.openAlert();
+    }
   }
 
   selectImage() {
@@ -95,6 +100,23 @@ export class PerfilPage implements OnInit {
 
   perfilCompleto() {
     this.router.navigate(['./extra']);
+  }
+
+  async openAlert (){
+    const alert = await this.alertCtrl.create({
+      header: 'Inicio de sesión requerido',
+      backdropDismiss: false,
+      message: 'Debes ingresar para acceder a un perfil',
+      buttons:[
+        {
+          text: 'Aceptar',
+          handler: () => {
+            this.router.navigate(['./metodologias'])
+          }
+        }
+      ]
+    })
+    await alert.present();
   }
 
 }
