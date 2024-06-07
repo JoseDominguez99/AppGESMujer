@@ -54,6 +54,9 @@ export class ViolentometroComponent  implements OnInit {
   async closeModal() {
     await this.modalCtrl.dismiss({
     });
+  }
+
+  restarme(){
     this.router.navigate(['/inicio']);
     this.netService.isInvited = false;
   }
