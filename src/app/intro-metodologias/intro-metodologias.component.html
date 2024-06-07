@@ -3,3 +3,28 @@
     <ion-title class="ion-text-center" color="light">Introducción a metodología</ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <p>
+          La metodología contruida consta de 13 pasos, dentro de cada uno de
+          ellos se encuentra una tarjeta con instrucciones y herramientas para
+          darte guía y soporte al ser aplicadas de en el trabajo con tu
+          colectiva, con la finalidad de poder ir desarrollando los pasos y
+          dando respuesta a las preguntas formuladas, puedes enriquecer o hacer
+          ajustes como mejor consideres. ¡Que lo disfrutes tanto como nosotras!
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button (click)="closeModal()" expand="in-block" fill="clear" shape="round">
+          <ion-icon slot="end" name="arrow-forward-circle-outline"></ion-icon>
+          Continuar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
