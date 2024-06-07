@@ -3,6 +3,7 @@ import { register } from 'swiper/element/bundle';
 import { SwiperOptions } from 'swiper/types';
 import { ModalController } from '@ionic/angular';
 import { IntroMetodologiasComponent } from 'src/app/intro-metodologias/intro-metodologias.component';
+import { NetworkService } from 'src/app/services/network.service';
 
 register();
 
@@ -13,7 +14,10 @@ register();
 })
 export class MetodologiasPage implements OnInit {
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(
+    private modalCtrl: ModalController,
+    private netService: NetworkService,
+  ) { }
 
   
 
@@ -37,6 +41,8 @@ export class MetodologiasPage implements OnInit {
 
   ngOnInit() {
     this.mostrarModal();
+    console.log(this.netService.isInvited.valueOf());
+    
   }
   async mostrarModal(){
     const modal = await this.modalCtrl.create({

@@ -10,7 +10,9 @@ export class IntroMetodologiasComponent  implements OnInit {
 
   constructor(private modalCtrl: ModalController) { }
 
-  ngOnInit() {}
+  ngOnInit(
+    
+  ) {}
 
   async closeModal(){
     await this.modalCtrl.dismiss();

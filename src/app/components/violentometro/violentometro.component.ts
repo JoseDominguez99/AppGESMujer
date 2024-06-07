@@ -5,6 +5,7 @@ import { User } from '@firebase/auth-types';
 import { AngularFirestore} from '@angular/fire/compat/firestore';
 import { ToastController } from '@ionic/angular';
 import { NetworkService } from 'src/app/services/network.service';
+import { Router } from '@angular/router';
 
 
 
@@ -33,7 +34,8 @@ export class ViolentometroComponent  implements OnInit {
     private auth: AngularFireAuth, 
     private firestore: AngularFirestore,
     private toastCtrl: ToastController,
-    public netService: NetworkService
+    public netService: NetworkService,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -52,6 +54,8 @@ export class ViolentometroComponent  implements OnInit {
   async closeModal() {
     await this.modalCtrl.dismiss({
     });
+    this.router.navigate(['/inicio']);
+    this.netService.isInvited = false;
   }
 
   aumentarSi(){

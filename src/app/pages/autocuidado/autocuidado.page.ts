@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SwiperOptions } from 'swiper/types';
+import { NetworkService } from 'src/app/services/network.service';
 
 @Component({
   selector: 'app-autocuidado',
@@ -26,9 +27,13 @@ export class AutocuidadoPage implements OnInit {
   };
   
   seleccion = '';
-  constructor() { }
+  constructor(
+    private netService: NetworkService
+  ) { }
 
   ngOnInit() {
+    console.log(this.netService.isInvited.valueOf());
+    
   }
 
   selectCategory(ev: any){

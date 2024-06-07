@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ViolentometroComponent } from 'src/app/components/violentometro/violentometro.component';
 import { ModalController } from '@ionic/angular';
-
+import { NetworkService } from 'src/app/services/network.service';
 @Component({
   selector: 'app-prevencion',
   templateUrl: './prevencion.page.html',
@@ -9,7 +9,10 @@ import { ModalController } from '@ionic/angular';
 })
 export class PrevencionPage implements OnInit {
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(
+    private modalCtrl: ModalController,
+    private netService: NetworkService,
+  ) { }
 
   ngOnInit() {
   }
