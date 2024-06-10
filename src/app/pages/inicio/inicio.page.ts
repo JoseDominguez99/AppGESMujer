@@ -83,7 +83,7 @@ export class InicioPage implements OnInit {
 
   ingresarInvitado(){
     this.netService.isInvited = true;
-    this.router.navigate(['/metodologias']);
+    this.router.navigate(['/bienvenida']);
     this.mostrarToast('Ingresaste como visitante');
   }
 }
