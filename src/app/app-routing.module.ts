@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'kit-seguridad',
     loadChildren: () => import('./pages/kit-seguridad/kit-seguridad.module').then( m => m.KitSeguridadPageModule)
   },
+  {
+    path: 'bienvenida',
+    loadChildren: () => import('./pages/bienvenida/bienvenida.module').then( m => m.BienvenidaPageModule)
+  },
 ];
 
 @NgModule({

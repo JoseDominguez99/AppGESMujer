@@ -13,8 +13,18 @@ export class AuthService {
     return this.auth.signInWithEmailAndPassword(correo, password);
   }
 
-  registro(correo: string, password: string){
-    return this.auth.createUserWithEmailAndPassword(correo, password);
+  async registro(correo: string, password: string): Promise<void> {
+    try {
+      const userCredential = await this.auth.createUserWithEmailAndPassword(correo, password);
+      const user = userCredential.user;
+      if (user) {
+        await user.sendEmailVerification();
+        console.log('Se envio el correo de verificacion');
+      }
+    } catch (error) {
+      console.error('Error en el registro:', error);
+      throw error;
+    }
   }
 
   logOut(){
