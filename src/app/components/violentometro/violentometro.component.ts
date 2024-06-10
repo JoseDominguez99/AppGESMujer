@@ -56,7 +56,7 @@ export class ViolentometroComponent  implements OnInit {
     });
   }
 
-  restarme(){
+  registrarme(){
     this.router.navigate(['/inicio']);
     this.netService.isInvited = false;
   }
