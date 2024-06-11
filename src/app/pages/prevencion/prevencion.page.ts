@@ -11,7 +11,6 @@ export class PrevencionPage implements OnInit {
 
   constructor(
     private modalCtrl: ModalController,
-    private netService: NetworkService,
   ) { }
 
   ngOnInit() {
@@ -27,5 +26,7 @@ export class PrevencionPage implements OnInit {
     });
     return await modal.present();
   }
+
+  
 
 }

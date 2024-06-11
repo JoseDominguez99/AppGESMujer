@@ -59,6 +59,7 @@ export class ViolentometroComponent  implements OnInit {
   registrarme(){
     this.router.navigate(['/inicio']);
     this.netService.isInvited = false;
+    this.closeModal();
   }
 
   aumentarSi(){

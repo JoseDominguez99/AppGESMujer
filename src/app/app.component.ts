@@ -15,11 +15,11 @@ export class AppComponent {
   userMail: string | null = null;
 
   public appPages = [
-    { title: 'Perfil', url: '/perfil', icon: 'person' },
-    { title: 'Metodologías de autocuidado', url: '/metodologias', icon: 'footsteps' },
-    { title: 'Autocuidado', url: '/autocuidado', icon: 'heart' },
-    { title: 'Botiquín de autocuidado', url: '/botiquin', icon: 'medkit' },
+    { title: 'Mi perfil', url: '/perfil', icon: 'person' },
     { title: 'Autocuidado colectivo', url: '/colectivo', icon: 'people' },
+    { title: 'Metodología de autocuidado', url: '/metodologias', icon: 'footsteps' },
+    { title: 'Claves del autocuidado', url: '/autocuidado', icon: 'heart' },
+    { title: 'Botiquín de autocuidado', url: '/botiquin', icon: 'medkit' },
     { title: 'Prevención de la violencia', url: '/prevencion', icon: 'hand-right' },
     { title: 'Créditos', url: '/creditos', icon: 'information-circle' },
     { title: 'Ayúdanos a crecer', url: '/extra', icon: 'id-card' },

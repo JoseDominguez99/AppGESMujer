@@ -1,9 +1,53 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="secondary">
-    <ion-title class="ion-text-center" color="light">BEINVENIDA</ion-title>
+    <ion-title class="ion-text-center" color="light">BIENVENIDA</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  
+<ion-content class="ion-text-center ion-padding">
+  <h1>BIENVENIDAS A LA APLICACIÓN DE GESMUJER</h1>
+  <p>La aplicación está diseñada para brindar información útil acerca del autocuidado y la violencia de género 
+    que pueda ayudar a reducir este fenómeno</p>
+    <br>
+    <h4>¿QUE PUEDES ENCONTRAR EN LA APLICACIÓN?</h4>
+    <div>
+      <ion-chip>
+        <ion-icon name="help-outline" color="secondary"></ion-icon>
+        <ion-label>Información de autocuidado</ion-label>
+      </ion-chip>
+      <ion-chip>
+        <ion-icon name="newspaper-outline" color="secondary"></ion-icon>
+        <ion-label>Formatos de ayuda</ion-label>
+      </ion-chip>
+      <ion-chip>
+        <ion-icon name="woman-outline" color="secondary"></ion-icon>
+        <ion-label>Actividades que fortalezcan tu salud física y mental</ion-label>
+      </ion-chip>
+      <ion-chip>
+        <ion-icon name="shield-checkmark-outline" color="secondary"></ion-icon>
+        <ion-label>Consejos para prevenir la violencia</ion-label>
+      </ion-chip>
+      <ion-chip>
+        <ion-icon name="thumbs-up-outline" color="secondary"></ion-icon>
+        <ion-label>Secciones didácticas</ion-label>
+      </ion-chip>
+    </div>
+    <br>
+    <div class="ion-text-center" style="margin-top: 20%;">
+      <ion-label>Al registrarte, nos ayudas a ampliar y mejorar los servicios que brindamos, si decides ingresar sin un registro
+        tendras acceso limitado a algunas funciones de la aplicación
+      </ion-label>
+      <ion-buttons slot="start" class="ion-padding">
+        <ion-button (click)="irARegistro()" expand="in-block" fill="outline" shape="round" color="secondary">
+          Resgistrarme primero
+        </ion-button>
+        <ion-button (click)="aceptar()" expand="in-block" fill="outline" shape="round" color="secondary">
+          Ir al contenido
+        </ion-button>
+      </ion-buttons>
+    </div>
 </ion-content>
+
+
+<img src="../../../assets/Defensora 05.png" alt="">
+

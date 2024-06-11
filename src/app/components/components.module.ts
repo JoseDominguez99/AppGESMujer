@@ -13,7 +13,7 @@ import { IntroMetodologiasComponent } from '../intro-metodologias/intro-metodolo
     HeaderComponent,
     TestComponent,
     ViolentometroComponent,
-    IntroMetodologiasComponent
+    IntroMetodologiasComponent,
   ],
   imports: [
     CommonModule,
@@ -21,7 +21,7 @@ import { IntroMetodologiasComponent } from '../intro-metodologias/intro-metodolo
   ],
   exports:[
     HeaderComponent,
-    IntroMetodologiasComponent
+    IntroMetodologiasComponent,
   ],
 })
 export class ComponentsModule { }

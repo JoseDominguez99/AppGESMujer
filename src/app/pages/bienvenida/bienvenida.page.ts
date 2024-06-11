@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NetworkService } from 'src/app/services/network.service';
 
 @Component({
   selector: 'app-bienvenida',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BienvenidaPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private netService: NetworkService,
+  ) { }
 
   ngOnInit() {
+  }
+
+  aceptar() {
+    this.router.navigateByUrl('/colectivo');
+  }
+
+  irARegistro() {
+    this.router.navigateByUrl('/inicio');
+    this.netService.isInvited = false;
   }
 
 }
