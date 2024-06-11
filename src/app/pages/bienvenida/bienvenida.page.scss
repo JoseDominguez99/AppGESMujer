@@ -4,3 +4,13 @@ img {
     width: 100%;
     height: auto; // Ajusta la altura según sea necesario
 }
+// Estilos específicos para el título
+h1 {
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    margin-top: 10px; // Espacio superior
+    margin-bottom: 15px; // Espacio inferior
+    font-weight: bold; // Hacer el texto en negrita
+    font-family: Arial, sans-serif; // Fuente del texto
+}
