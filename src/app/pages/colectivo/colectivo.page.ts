@@ -5,6 +5,7 @@ import { AngularFirestore} from '@angular/fire/compat/firestore';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { User } from '@firebase/auth-types';
 import { NetworkService } from 'src/app/services/network.service';
+import { IntroAutodiagnosticoComponent } from 'src/app/components/intro-autodiagnostico/intro-autodiagnostico.component';
 
 
 @Component({
@@ -26,6 +27,7 @@ export class ColectivoPage implements OnInit {
     }
 
   ngOnInit() {
+    this.abrirIntro();
     this.netService.checkNetworkConnection2();
     this.auth.authState.subscribe((user: User | null) =>{
       if(user){
@@ -52,6 +54,13 @@ export class ColectivoPage implements OnInit {
       mode: 'md',
       showBackdrop: true,
       backdropDismiss: false,
+    });
+    return await modal.present();
+  }
+
+  async abrirIntro(){
+    const modal = await this.modalCtrl.create({
+      component: IntroAutodiagnosticoComponent,
     });
     return await modal.present();
   }
