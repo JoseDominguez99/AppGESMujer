@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { TestComponent } from './test/test.component';
 import { ViolentometroComponent } from './violentometro/violentometro.component';
 import { IntroMetodologiasComponent } from '../intro-metodologias/intro-metodologias.component';
+import { IntroAutodiagnosticoComponent } from './intro-autodiagnostico/intro-autodiagnostico.component';
 
 
 
@@ -14,6 +15,7 @@ import { IntroMetodologiasComponent } from '../intro-metodologias/intro-metodolo
     TestComponent,
     ViolentometroComponent,
     IntroMetodologiasComponent,
+    IntroAutodiagnosticoComponent
   ],
   imports: [
     CommonModule,
@@ -22,6 +24,7 @@ import { IntroMetodologiasComponent } from '../intro-metodologias/intro-metodolo
   exports:[
     HeaderComponent,
     IntroMetodologiasComponent,
+    IntroAutodiagnosticoComponent
   ],
 })
 export class ComponentsModule { }
