@@ -15,10 +15,12 @@ export class BienvenidaPage implements OnInit {
   ) { }
 
   ngOnInit() {
+
   }
 
   aceptar() {
     this.router.navigateByUrl('/colectivo');
+    this.netService.isInvited = true;
   }
 
   irARegistro() {
