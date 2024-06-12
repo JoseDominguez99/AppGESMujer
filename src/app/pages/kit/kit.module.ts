@@ -8,12 +8,15 @@ import { KitPageRoutingModule } from './kit-routing.module';
 
 import { KitPage } from './kit.page';
 
+import { ComponentsModule } from 'src/app/components/components.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    KitPageRoutingModule
+    KitPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [KitPage]
 })
