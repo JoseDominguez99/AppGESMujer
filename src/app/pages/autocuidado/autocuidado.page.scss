@@ -106,6 +106,10 @@ ion-icon {
   color: rgb(103, 49, 103);
   font-size: 15px;
 }
+.morado3 {
+  color: rgb(103, 49, 103);
+  font-size: 20px;
+}
 
 section.card {
   position: relative;
@@ -202,3 +206,35 @@ button {
   cursor: auto;
   color: grey;
  }
+
+.tarjeta {
+  width: 325px;
+  height: 100%;
+  background: #f0f2f3;
+  padding: 10px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid rgb(162, 46, 188); 
+  margin: 0 auto; /* Alinea la tarjeta horizontalmente */
+}
+
+.tarjeta__titulo {
+  font-size: 1.4em;
+  font-weight: 800;
+  color: purple; /* Cambiado a morado */
+}
+
+.tarjeta__texto {
+    color: rgb(103, 49, 103);
+    font-size: 16px;
+}
+
+.tarjeta__boton:hover {
+  background-color: #272C30;
+}
+.custom-icon2 {
+  font-size: 16px;
+}
