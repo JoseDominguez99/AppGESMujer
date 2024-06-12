@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SwiperOptions } from 'swiper/types';
 import { NetworkService } from 'src/app/services/network.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-autocuidado',
@@ -28,7 +30,9 @@ export class AutocuidadoPage implements OnInit {
   
   seleccion = '';
   constructor(
-    private netService: NetworkService
+    private netService: NetworkService,
+    private router: Router
+
   ) { }
 
   ngOnInit() {
@@ -40,4 +44,9 @@ export class AutocuidadoPage implements OnInit {
     this.seleccion = ev.detail.value;
   }
 
+
+leermas() {
+  this.router.navigateByUrl('/recursos');
+  this.netService.isInvited = true;
+}
 }
