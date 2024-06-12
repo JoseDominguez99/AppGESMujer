@@ -4,43 +4,43 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class=" ion-padding">
-    <ion-label class="justificado" >Esta aplicación está diseñada para brindar información útil acerca del autocuidado y la violencia de género 
-      que pueda ayudar a reducir este fenómeno</ion-label>
-    <h4 class="ion-text-center">¿QUE PUEDES ENCONTRAR EN LA APLICACIÓN?</h4>
-    <div style="text-align: left;">
+<ion-content class=" ion-padding  ion-text-justify">
+    <ion-label >Esta aplicación está diseñada para brindar información útil acerca del autocuidado y la violencia de género 
+      que pueda ayudar a reducir este fenómeno.</ion-label>
+      <h3 class="ion-text-center"><strong>¿Qué puedes encontrar en la aplicación?</strong></h3>
+      <div style="text-align: left;">
       <ion-chip>
-          <ion-icon name="help-outline" color="secondary"></ion-icon>
-          <ion-label>Información de autocuidado</ion-label>
-      </ion-chip>
-      <ion-chip>
-          <ion-icon name="newspaper-outline" color="secondary"></ion-icon>
-          <ion-label>Formatos de ayuda</ion-label>
-      </ion-chip>
-      <ion-chip>
-          <ion-icon name="woman-outline" color="secondary"></ion-icon>
-          <ion-label>Actividades que fortalezcan tu salud física y mental</ion-label>
-      </ion-chip>
+        <ion-icon name="woman-outline" color="secondary"></ion-icon>
+        <ion-label>Actividades que fortalezcan tu salud física y mental</ion-label>
+    </ion-chip>
       <ion-chip>
           <ion-icon name="shield-checkmark-outline" color="secondary"></ion-icon>
           <ion-label>Consejos para prevenir la violencia</ion-label> </ion-chip>
       <ion-chip>
-          <ion-icon name="thumbs-up-outline" color="secondary"></ion-icon>
-          <ion-label>Secciones didácticas</ion-label>
-      </ion-chip>
+        <ion-icon name="help-outline" color="secondary"></ion-icon>
+        <ion-label>Información de autocuidado</ion-label>
+    </ion-chip>
+    <ion-chip>
+      <ion-icon name="thumbs-up-outline" color="secondary"></ion-icon>
+      <ion-label>Secciones didácticas</ion-label>
+  </ion-chip>
+  <ion-chip>
+    <ion-icon name="newspaper-outline" color="secondary"></ion-icon>
+    <ion-label>Formatos de ayuda</ion-label>
+</ion-chip>
   </div> <br>
   <img src="../../../assets/Bienvenida.png">
-    <div class="ion-text-center" style="margin-top: 20%;">
+    <div class="ion-text-justify" style="margin-top: 20%;">
       <ion-label>Al registrarte, nos ayudas a ampliar y mejorar los servicios que brindamos, si decides ingresar sin un registro
         tendras acceso limitado a algunas funciones de la aplicación
       </ion-label>
       <ion-buttons slot="start" class="ion-padding">
-        <ion-button (click)="irARegistro()" expand="in-block" fill="outline" shape="round" color="secondary">
-          Resgistrarme primero
-        </ion-button>
-        <ion-button (click)="aceptar()" expand="in-block" fill="outline" shape="round" color="secondary">
+        <button (click)="irARegistro()">
+          Resgistrarme
+        </button>
+        <button (click)="aceptar()">
           Ir al contenido
-        </ion-button>
+        </button>
       </ion-buttons>
     </div>
 </ion-content>
