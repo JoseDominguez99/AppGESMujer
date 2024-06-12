@@ -3,11 +3,11 @@ import { ModalController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-intro-kit',
-  templateUrl: './intro-kit.component.html',
-  styleUrls: ['./intro-kit.component.scss'],
+  selector: 'app-intro-botiquin',
+  templateUrl: './intro-botiquin.component.html',
+  styleUrls: ['./intro-botiquin.component.scss'],
 })
-export class IntroKitComponent  implements OnInit {
+export class IntroBotiquinComponent  implements OnInit {
 
   constructor(
     private modalCtrl: ModalController,

@@ -8,6 +8,9 @@ import { IntroMetodologiasComponent } from '../intro-metodologias/intro-metodolo
 import { IntroAutodiagnosticoComponent } from './intro-autodiagnostico/intro-autodiagnostico.component';
 import { IntroKitComponent } from './intro-kit/intro-kit.component';
 import { IntroClavesComponent } from './intro-claves/intro-claves.component';
+import { IntroSanacionComponent } from './intro-sanacion/intro-sanacion.component';
+import { IntroBotiquinComponent } from './intro-botiquin/intro-botiquin.component';
+import { IntroAsertivaComponent } from './intro-asertiva/intro-asertiva.component';
 
 
 
@@ -19,7 +22,10 @@ import { IntroClavesComponent } from './intro-claves/intro-claves.component';
     IntroMetodologiasComponent,
     IntroAutodiagnosticoComponent,
     IntroKitComponent,
-    IntroClavesComponent
+    IntroClavesComponent,
+    IntroSanacionComponent,
+    IntroBotiquinComponent,
+    IntroAsertivaComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +36,10 @@ import { IntroClavesComponent } from './intro-claves/intro-claves.component';
     IntroMetodologiasComponent,
     IntroAutodiagnosticoComponent,
     IntroKitComponent,
-    IntroClavesComponent
+    IntroClavesComponent,
+    IntroSanacionComponent,
+    IntroBotiquinComponent,
+    IntroAsertivaComponent
   ],
 })
 export class ComponentsModule { }
