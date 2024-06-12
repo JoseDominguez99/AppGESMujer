@@ -7,6 +7,10 @@ import { ViolentometroComponent } from './violentometro/violentometro.component'
 import { IntroMetodologiasComponent } from '../intro-metodologias/intro-metodologias.component';
 import { IntroAutodiagnosticoComponent } from './intro-autodiagnostico/intro-autodiagnostico.component';
 import { IntroKitComponent } from './intro-kit/intro-kit.component';
+import { IntroClavesComponent } from './intro-claves/intro-claves.component';
+import { IntroSanacionComponent } from './intro-sanacion/intro-sanacion.component';
+import { IntroBotiquinComponent } from './intro-botiquin/intro-botiquin.component';
+import { IntroAsertivaComponent } from './intro-asertiva/intro-asertiva.component';
 
 
 
@@ -17,7 +21,11 @@ import { IntroKitComponent } from './intro-kit/intro-kit.component';
     ViolentometroComponent,
     IntroMetodologiasComponent,
     IntroAutodiagnosticoComponent,
-    IntroKitComponent
+    IntroKitComponent,
+    IntroClavesComponent,
+    IntroSanacionComponent,
+    IntroBotiquinComponent,
+    IntroAsertivaComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +35,11 @@ import { IntroKitComponent } from './intro-kit/intro-kit.component';
     HeaderComponent,
     IntroMetodologiasComponent,
     IntroAutodiagnosticoComponent,
-    IntroKitComponent
+    IntroKitComponent,
+    IntroClavesComponent,
+    IntroSanacionComponent,
+    IntroBotiquinComponent,
+    IntroAsertivaComponent
   ],
 })
 export class ComponentsModule { }

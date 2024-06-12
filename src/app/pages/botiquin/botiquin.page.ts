@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { DescargasService } from 'src/app/services/descargas.service';
 import { ToastController } from '@ionic/angular';
 import { NetworkService } from 'src/app/services/network.service';
+import { ModalController } from '@ionic/angular';
+import { IntroBotiquinComponent } from 'src/app/components/intro-botiquin/intro-botiquin.component';
 
 @Component({
   selector: 'app-botiquin',
@@ -18,15 +20,24 @@ export class BotiquinPage implements OnInit {
     private router: Router,
     private descarga: DescargasService,
     private toastCtrl: ToastController,
-    public netService: NetworkService) { 
+    public netService: NetworkService,
+    private modalCtrl: ModalController) { 
   }
 
 
   ngOnInit() {
+    this.mostrarModal();
     this.netService.checkNetworkConnection2();
     this.audio = new Audio();
     this.audio.src = '../../assets/meditacion.mp3';
     this.audio.load();
+  }
+
+  async mostrarModal(){
+    const modal = await this.modalCtrl.create({
+      component: IntroBotiquinComponent,
+    });
+    await modal.present();
   }
   playAudio() {
     if (this.audioReproduciendose) {
