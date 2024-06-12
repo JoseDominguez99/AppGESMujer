@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { SwiperOptions } from 'swiper/types';
 import { NetworkService } from 'src/app/services/network.service';
+
 import { ModalController } from '@ionic/angular';
 import { IntroClavesComponent } from 'src/app/components/intro-claves/intro-claves.component';
 
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-autocuidado',
   templateUrl: './autocuidado.page.html',
@@ -32,6 +34,8 @@ export class AutocuidadoPage implements OnInit {
   constructor(
     private netService: NetworkService,
     private modalCtrl: ModalController,
+    private router: Router
+
   ) { }
 
   ngOnInit() {
@@ -44,6 +48,7 @@ export class AutocuidadoPage implements OnInit {
     this.seleccion = ev.detail.value;
   }
 
+
   async mostrarModal(){
     const modal = await this.modalCtrl.create({
       component: IntroClavesComponent,
@@ -51,4 +56,10 @@ export class AutocuidadoPage implements OnInit {
     await modal.present();
   }
 
+
+
+leermas() {
+  this.router.navigateByUrl('/recursos');
+  this.netService.isInvited = true;
+}
 }
