@@ -51,6 +51,22 @@ const routes: Routes = [
     path: 'bienvenida',
     loadChildren: () => import('./pages/bienvenida/bienvenida.module').then( m => m.BienvenidaPageModule)
   },
+  {
+    path: 'kit',
+    loadChildren: () => import('./pages/kit/kit.module').then( m => m.KitPageModule)
+  },
+  {
+    path: 'sanacion',
+    loadChildren: () => import('./pages/sanacion/sanacion.module').then( m => m.SanacionPageModule)
+  },
+  {
+    path: 'recursos',
+    loadChildren: () => import('./pages/recursos/recursos.module').then( m => m.RecursosPageModule)
+  },
+  {
+    path: 'comunicacion',
+    loadChildren: () => import('./pages/comunicacion/comunicacion.module').then( m => m.ComunicacionPageModule)
+  },
 ];
 
 @NgModule({

@@ -37,6 +37,7 @@
     "@ionic-native/in-app-browser": "^5.0.0",
     "@ionic/angular": "^8.0.0",
     "@ionic/storage-angular": "^4.0.0",
+    "bootstrap-icons": "^1.11.3",
     "cordova-plugin-file": "^8.0.1",
     "cordova-plugin-geolocation": "^5.0.0",
     "cordova-plugin-network-information": "^3.0.0",
