@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SwiperOptions } from 'swiper/types';
 import { NetworkService } from 'src/app/services/network.service';
+import { ModalController } from '@ionic/angular';
+import { IntroClavesComponent } from 'src/app/components/intro-claves/intro-claves.component';
 
 @Component({
   selector: 'app-autocuidado',
@@ -28,16 +30,25 @@ export class AutocuidadoPage implements OnInit {
   
   seleccion = '';
   constructor(
-    private netService: NetworkService
+    private netService: NetworkService,
+    private modalCtrl: ModalController,
   ) { }
 
   ngOnInit() {
     console.log(this.netService.isInvited.valueOf());
+    this.mostrarModal();
     
   }
 
   selectCategory(ev: any){
     this.seleccion = ev.detail.value;
+  }
+
+  async mostrarModal(){
+    const modal = await this.modalCtrl.create({
+      component: IntroClavesComponent,
+    });
+    await modal.present();
   }
 
 }

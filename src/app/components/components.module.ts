@@ -7,6 +7,7 @@ import { ViolentometroComponent } from './violentometro/violentometro.component'
 import { IntroMetodologiasComponent } from '../intro-metodologias/intro-metodologias.component';
 import { IntroAutodiagnosticoComponent } from './intro-autodiagnostico/intro-autodiagnostico.component';
 import { IntroKitComponent } from './intro-kit/intro-kit.component';
+import { IntroClavesComponent } from './intro-claves/intro-claves.component';
 
 
 
@@ -17,7 +18,8 @@ import { IntroKitComponent } from './intro-kit/intro-kit.component';
     ViolentometroComponent,
     IntroMetodologiasComponent,
     IntroAutodiagnosticoComponent,
-    IntroKitComponent
+    IntroKitComponent,
+    IntroClavesComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { IntroKitComponent } from './intro-kit/intro-kit.component';
     HeaderComponent,
     IntroMetodologiasComponent,
     IntroAutodiagnosticoComponent,
-    IntroKitComponent
+    IntroKitComponent,
+    IntroClavesComponent
   ],
 })
 export class ComponentsModule { }

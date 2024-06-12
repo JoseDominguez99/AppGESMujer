@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { RecursosPageRoutingModule } from './recursos-routing.module';
 
 import { RecursosPage } from './recursos.page';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RecursosPageRoutingModule
+    RecursosPageRoutingModule,
+    RouterModule.forChild([{ path: '', component: RecursosPage }])
   ],
   declarations: [RecursosPage]
 })
