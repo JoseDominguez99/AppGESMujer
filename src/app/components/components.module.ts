@@ -11,6 +11,7 @@ import { IntroClavesComponent } from './intro-claves/intro-claves.component';
 import { IntroSanacionComponent } from './intro-sanacion/intro-sanacion.component';
 import { IntroBotiquinComponent } from './intro-botiquin/intro-botiquin.component';
 import { IntroAsertivaComponent } from './intro-asertiva/intro-asertiva.component';
+import { IntroPrevencionComponent } from './intro-prevencion/intro-prevencion.component';
 
 
 
@@ -25,7 +26,8 @@ import { IntroAsertivaComponent } from './intro-asertiva/intro-asertiva.componen
     IntroClavesComponent,
     IntroSanacionComponent,
     IntroBotiquinComponent,
-    IntroAsertivaComponent
+    IntroAsertivaComponent,
+    IntroPrevencionComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +41,8 @@ import { IntroAsertivaComponent } from './intro-asertiva/intro-asertiva.componen
     IntroClavesComponent,
     IntroSanacionComponent,
     IntroBotiquinComponent,
-    IntroAsertivaComponent
+    IntroAsertivaComponent,
+    IntroPrevencionComponent
   ],
 })
 export class ComponentsModule { }

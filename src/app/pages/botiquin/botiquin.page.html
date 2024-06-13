@@ -4,52 +4,6 @@
     <ion-grid fixed>
         <ion-row>
             <ion-col size="12">
-                <ion-card (click)="abrirKit()">
-                    <ion-card-header>
-                        <img src="../../../assets/Paso9.png" alt="">
-                        <ion-card-subtitle class="ion-text-justify">Te compartimos un Kit de seguridad digital para defensoras de derechos humanos de las mujeres,
-                                            en este Kit recopilamos lo que en co-construcción con otras colectivas, 
-                                            dió como resultado este Kit, seguro será de ayuda y te pedimos lo compartas 
-                                            y lo puedas poner en práctica.
-                        </ion-card-subtitle>
-                    </ion-card-header>
-                    <ion-card-content class="ion-text-center">
-                        <h1>
-                            KIT DE SEGURIDAD DIGITAL
-                        </h1>
-                        <p>*Da click aquí para saber más</p>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-            <ion-col size="12">
-                <ion-card>
-                    <ion-card-header>
-                        <img src="../../../assets/Defensora2.png" alt="">
-                        <ion-card-subtitle class="ion-text-justify">Hemos recopilado una seria de aceites, esencias, flores, 
-                                            hierbas, tés e inciensos, que nos han ayudado a reconfortar el alma, el espíritu, 
-                                            las emociones y el cuerpo.
-                        </ion-card-subtitle>
-                    </ion-card-header>
-                    <ion-card-content class="ion-text-center">
-                        <h1>
-                        <a
-                            *ngIf="netService.isConnected" 
-                            href="https://www.gesmujer.org/sitio/aceites-y-esencias-de-autocuidado/" 
-                            target="_blank" 
-                            rel="noopener noreferrer">
-                            KIT DE SANACIÓN
-                        </a>
-                        <a 
-                            *ngIf="!netService.isConnected" 
-                            rel="noopener noreferrer">
-                            KIT DE SANACIÓN
-                        </a>
-                        </h1>
-                    <p *ngIf="netService.isConnected">*Necesitas conexión a internet</p>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-            <ion-col size="12">
                 <ion-card>
                     <ion-card-header>
                         <img src="../../../assets/Spotify.png" alt="">
@@ -79,6 +33,7 @@
                 <ion-card>
                     <ion-card-header>
                         <img src="">
+                        <ion-card-title>Meditación guiada</ion-card-title>
                         <ion-card-subtitle>Una de las herramientas para guiarnos por el camino de la tranquilidad y el soltar las cargas diarias, escuchalo y déjate llevar.</ion-card-subtitle>
                     </ion-card-header>
                     <ion-card-content>
@@ -196,26 +151,6 @@
                         <a 
                         *ngIf="!netService.isConnected"
                         rel="noopener noreferrer">PLAN DE AUTOCUIDADO</a>
-                        <p>*Necesitas conexión a internet</p>
-                    </ion-card-content>
-                </ion-card>
-            </ion-col>
-            <ion-col size="12">
-                <ion-card>
-                    <ion-card-header>
-                        <img src="../../../assets/Paso1.png" alt="">
-                        <ion-card-subtitle class="ion-text-justify">Pasos para expresar lo que siento y necesito.
-                        </ion-card-subtitle>
-                    </ion-card-header>
-                    <ion-card-content class="ion-text-center">
-                        <a 
-                        *ngIf="netService.isConnected"
-                        href="https://www.gesmujer.org/sitio/wp-content/uploads/2023/07/10.-Pasos-para-expresar-lo-que-siento.pdf" 
-                        target="_blank" 
-                        rel="noopener noreferrer">COMUNICACIÓN ASERTIVA</a>
-                        <a 
-                        *ngIf="!netService.isConnected"
-                        rel="noopener noreferrer">COMUNICACIÓN ASERTIVA</a>
                         <p>*Necesitas conexión a internet</p>
                     </ion-card-content>
                 </ion-card>

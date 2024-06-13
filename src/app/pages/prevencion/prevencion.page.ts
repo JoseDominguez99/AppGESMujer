@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ViolentometroComponent } from 'src/app/components/violentometro/violentometro.component';
 import { ModalController } from '@ionic/angular';
 import { NetworkService } from 'src/app/services/network.service';
+import { IntroPrevencionComponent } from 'src/app/components/intro-prevencion/intro-prevencion.component';
 @Component({
   selector: 'app-prevencion',
   templateUrl: './prevencion.page.html',
@@ -14,6 +15,7 @@ export class PrevencionPage implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.mostrarModal();
   }
 
   async abrirTest(){
@@ -27,6 +29,11 @@ export class PrevencionPage implements OnInit {
     return await modal.present();
   }
 
-  
+  async mostrarModal(){
+    const modal = await this.modalCtrl.create({
+      component: IntroPrevencionComponent,
+    });
+    await modal.present();
+  }
 
 }
