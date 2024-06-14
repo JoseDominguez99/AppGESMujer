@@ -12,6 +12,7 @@ import { IntroSanacionComponent } from './intro-sanacion/intro-sanacion.componen
 import { IntroBotiquinComponent } from './intro-botiquin/intro-botiquin.component';
 import { IntroAsertivaComponent } from './intro-asertiva/intro-asertiva.component';
 import { IntroPrevencionComponent } from './intro-prevencion/intro-prevencion.component';
+import { IntroRecursosComponent } from './intro-recursos/intro-recursos.component';
 
 
 
@@ -27,7 +28,8 @@ import { IntroPrevencionComponent } from './intro-prevencion/intro-prevencion.co
     IntroSanacionComponent,
     IntroBotiquinComponent,
     IntroAsertivaComponent,
-    IntroPrevencionComponent
+    IntroPrevencionComponent,
+    IntroRecursosComponent
   ],
   imports: [
     CommonModule,
@@ -42,7 +44,8 @@ import { IntroPrevencionComponent } from './intro-prevencion/intro-prevencion.co
     IntroSanacionComponent,
     IntroBotiquinComponent,
     IntroAsertivaComponent,
-    IntroPrevencionComponent
+    IntroPrevencionComponent,
+    IntroRecursosComponent
   ],
 })
 export class ComponentsModule { }
