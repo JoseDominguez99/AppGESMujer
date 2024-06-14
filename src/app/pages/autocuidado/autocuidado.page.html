@@ -98,7 +98,7 @@
         <img src="../../../assets/Imagen1.png" alt="">
         <div class="card__content">
           <p><strong>Cuida de ti misma</strong></p>
-          <p ion-text-justify>
+          <p style="text-align: left;">
             <em>            
               Vuelve a ti misma, conecta contigo y cuida de ti misma.<br>
               Tu cuerpo te necesita, tus sentimientos te necesitan, tus percepciones te necesitan.<br>
@@ -124,7 +124,6 @@
               
     </div>
   </div>
-
 
   <div *ngIf="seleccion === 'Emocional'" class="ion-text-center ion-padding">
     <h1>AUTOCUIDADO EMOCIONAL Y MENTAL</h1>
@@ -189,8 +188,49 @@
           <div class="notiborderglow"></div>
           <div class="notititle">Alcanzar su completo potencial</div>
         </div>      </div><br>
-        <h2 class="fancy" style="--w: 50vw;--c: #8d078d;--b:4px;--g: 40px">Caricia para el alma</h2>
-
+        <div>
+          <h2 class="fancy" style="--w: 50vw;--c: #8d078d;--b:4px;--g: 40px">Caricia para el alma</h2><br>
+          <p class="morado2">Presiona la imagen y descubre el poema</p>
+          <div class="ion-text-center ion-padding">
+        <section id="card1" class="card">
+          <img src="../../../assets/Emocional Mental.png" alt="">
+          <div class="card__content">
+            <p><strong>El cuerpo en quiteud</strong></p>
+            <p style="text-align: left;">
+              <em>            
+                La respiración suave y serena.<br>
+                Soy mi refugio.<br>
+                El descanso circula dentro de mi.<br>
+                El descando me llena.<br>
+                Bebo del no hacer.<br>
+                Repongo energia.<br>
+                Me acuna el silencio.<br>
+                Me vuelve simple,<br>
+                más simple, más simple.<br>
+                Me saco esta capa,<br>
+                y esta,<br>
+                y esta otra.<br>
+                Acá estoy.<br>
+                Tomo refugio en mí.<br>
+                Soy presencia.<br>
+                Y es suficiente.<br>
+                <strong>Soy suficiente.</strong><br>
+              </em>
+            </p>
+            
+            <p class=" ion-text-justify">            
+              Autora: <strong> Guadalupe Seijo.</strong><br>
+              <em>Conectar con nuestro cuerpo: Regando Semillas.</em></p>
+          </div>
+        </section>
+      </div>
+        <br><br>
+        <p><strong>Te invitamos a descargar y leer manual donde se menciona más informacion útil.</strong></p><br>
+        <ion-button (click)="leermas()" style="--background: purple; --color: white;">
+          Leer más
+        </ion-button>
+                
+      </div>
   </div>
 
   <div *ngIf="seleccion === 'Laboral'" class="ion-text-center ion-padding">
@@ -205,6 +245,19 @@
       laborales, respeto fines de semana,
       vacaciones y días festivos. </p>
       <img src="../../../assets/Colectivo Y Laboral.png" alt="">
+
+      <h2 class="fancy" style="--w: 50vw;--c: #8d078d;--b:4px;--g: 40px">Lo que se sabe</h2><br>
+      <div>
+        <ion-icon class="custom-icon2" name="megaphone-outline"></ion-icon>
+        <p  class="ion-text-justify">
+          De acuerdo a la Declaración sobre Defensoras y Defensores de Derechos Humanos de las Naciones Unidas, se define como def
+        </p> <br><br>
+          <ion-icon class="custom-icon2" name="megaphone-outline"></ion-icon>
+          <p class="ion-text-justify">
+          El Instituto Mexicano del Seguro Social, nos dice que, la salud mental es importante porque puede afectar la salud fisica, por ejemplo, los transtornos mentales aumentan el riesgo de accidentes cerebrovasculares,diabetes tipo 2 y enfermedades cardiacas.
+        </p>
+      </div><br>
+
   </div>
 
   <div *ngIf="seleccion === 'Digital'" class="ion-text-center ion-padding">
