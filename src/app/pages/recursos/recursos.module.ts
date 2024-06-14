@@ -8,6 +8,7 @@ import { RecursosPageRoutingModule } from './recursos-routing.module';
 
 import { RecursosPage } from './recursos.page';
 import { RouterModule } from '@angular/router';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     IonicModule,
     RecursosPageRoutingModule,
+    ComponentsModule,
     RouterModule.forChild([{ path: '', component: RecursosPage }])
   ],
   declarations: [RecursosPage]
