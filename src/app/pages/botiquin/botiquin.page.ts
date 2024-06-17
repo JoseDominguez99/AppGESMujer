@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DescargasService } from 'src/app/services/descargas.service';
 import { ToastController } from '@ionic/angular';
 import { NetworkService } from 'src/app/services/network.service';
 import { ModalController } from '@ionic/angular';
 import { IntroBotiquinComponent } from 'src/app/components/intro-botiquin/intro-botiquin.component';
+import { MapaComponent } from 'src/app/components/mapa/mapa.component';
+import { EngancheComponent } from 'src/app/components/enganche/enganche.component';
 
 @Component({
   selector: 'app-botiquin',
@@ -18,7 +19,6 @@ export class BotiquinPage implements OnInit {
 
   constructor(
     private router: Router,
-    private descarga: DescargasService,
     private toastCtrl: ToastController,
     public netService: NetworkService,
     private modalCtrl: ModalController) { 
@@ -36,6 +36,20 @@ export class BotiquinPage implements OnInit {
   async mostrarModal(){
     const modal = await this.modalCtrl.create({
       component: IntroBotiquinComponent,
+    });
+    await modal.present();
+  }
+
+  async abrirMapa(){
+    const modal = await this.modalCtrl.create({
+      component: MapaComponent,
+    });
+    await modal.present();
+  }
+
+  async abrirEnganche(){
+    const modal = await this.modalCtrl.create({
+      component: EngancheComponent,
     });
     await modal.present();
   }
@@ -58,23 +72,6 @@ export class BotiquinPage implements OnInit {
 
   abrirKit(){
     this.router.navigate(['/kit-seguridad']);
-  }
-
-  downloadPoliticas() {
-    this.descarga.downloadFile('documentos/politicas.docx').subscribe(url => {
-      window.open(url, '_blank');
-      this.mostrarToast('Documento guardado en el dispositivo');
-    }, error => {
-      console.error('Error al descargar el archivo', error);
-    });
-  }
-  downloadPlan() {
-    this.descarga.downloadFile('documentos/PLAN_DE_AUTOCUIDADO_COLECTIVO.docx').subscribe(url => {
-      window.open(url, '_blank');
-      this.mostrarToast('Documento guardado en el dispositivo');
-    }, error => {
-      console.error('Error al descargar el archivo', error);
-    });
   }
 
   async mostrarToast(mensaje: string) {

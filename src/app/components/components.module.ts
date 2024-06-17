@@ -13,6 +13,8 @@ import { IntroBotiquinComponent } from './intro-botiquin/intro-botiquin.componen
 import { IntroAsertivaComponent } from './intro-asertiva/intro-asertiva.component';
 import { IntroPrevencionComponent } from './intro-prevencion/intro-prevencion.component';
 import { IntroRecursosComponent } from './intro-recursos/intro-recursos.component';
+import { MapaComponent } from './mapa/mapa.component';
+import { EngancheComponent } from './enganche/enganche.component';
 
 
 
@@ -29,7 +31,9 @@ import { IntroRecursosComponent } from './intro-recursos/intro-recursos.componen
     IntroBotiquinComponent,
     IntroAsertivaComponent,
     IntroPrevencionComponent,
-    IntroRecursosComponent
+    IntroRecursosComponent,
+    MapaComponent,
+    EngancheComponent
   ],
   imports: [
     CommonModule,
@@ -45,7 +49,9 @@ import { IntroRecursosComponent } from './intro-recursos/intro-recursos.componen
     IntroBotiquinComponent,
     IntroAsertivaComponent,
     IntroPrevencionComponent,
-    IntroRecursosComponent
+    IntroRecursosComponent,
+    MapaComponent,
+    EngancheComponent
   ],
 })
 export class ComponentsModule { }

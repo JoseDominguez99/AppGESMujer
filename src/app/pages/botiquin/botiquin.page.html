@@ -6,7 +6,7 @@
             <ion-col size="12">
                 <ion-card>
                     <ion-card-header>
-                        <img src="../../../assets/Spotify.png" alt="">
+                        <img src="../../../assets/Defensora 06.png" alt="">
                         <ion-card-subtitle class="ion-text-justify">Una colección de las canciones que nos han acompañado en las sesiones de autocuidado 
                                                                     y cuidado colectivos así como una recopilación de temas por parte de las defensoras, 
                                                                     para ser compartidas. ¡A disfrutar!
@@ -33,20 +33,20 @@
                 <ion-card>
                     <ion-card-header>
                         <img src="">
-                        <ion-card-title>Meditación guiada</ion-card-title>
                         <ion-card-subtitle>Una de las herramientas para guiarnos por el camino de la tranquilidad y el soltar las cargas diarias, escuchalo y déjate llevar.</ion-card-subtitle>
                     </ion-card-header>
-                    <ion-card-content>
+                    <ion-card-content class="ion-text-center">
                         <ion-button (click)="playAudio()" expand="block" fill="clear" shape="round">
                             <ion-icon slot="start" [name]="audioReproduciendose ? 'pause' : 'play'" class="cardsContent"></ion-icon>
                         </ion-button>
+                        <a >MEDITACIÓN GUIADA</a>
                     </ion-card-content>
                 </ion-card>
             </ion-col>
             <ion-col size="12">
-                <ion-card>
+                <ion-card (click)="abrirEnganche()">
                     <ion-card-header>
-                        <img src="../../../assets/Defensora2.png" alt="">
+                        <img src="../../../assets/Enganche-Cook.png" alt="">
                         <ion-card-subtitle class="ion-text-justify">Lo importante de este ejercicio es que causa un efecto integrador
                                                                     en el cerebro y ayuda a activar la corteza sensorial y motora de
                                                                     ambos hemisferios cerebrales.
@@ -54,13 +54,14 @@
                     </ion-card-header>
                     <ion-card-content class="ion-text-center">
                         <a>ENGANCHE DE COOK</a>
+                        <p>Haz click en la imagen para ver el paso a paso</p>
                     </ion-card-content>
                 </ion-card>
             </ion-col>
             <ion-col size="12">
-                <ion-card>
+                <ion-card (click)="abrirMapa()">
                     <ion-card-header>
-                        <img src="../../../assets/Defensora2.png" alt="">
+                        <img src="../../../assets/mapa.gif" alt="">
                         <ion-card-subtitle class="ion-text-justify">Uno de los instrumentos que nos han ayudado a saber que parte de 
                                                                     nuestro cuerpo tiene dolencias y cuales son nuestras fortalezas, 
                                                                     te la recomendamos para hacer una evaluación gráfica del dolor del 
@@ -69,6 +70,7 @@
                     </ion-card-header>
                     <ion-card-content class="ion-text-center">
                         <a>MAPA CORPORAL</a>
+                        <p>Haz click en la imagen para ver el paso a paso</p>
                     </ion-card-content>
                 </ion-card>
             </ion-col>
@@ -156,20 +158,23 @@
                 </ion-card>
             </ion-col>
             <ion-col size="12">
-                <ion-card (click)="downloadPoliticas()">
+                <ion-card >
                     <ion-card-header>
                         <img src="../../../assets/Paso1.png" alt="">
                         <ion-card-subtitle class="ion-text-justify">Descarga Formato de Políticas Institucionales de Autocuidado.
                         </ion-card-subtitle>
                     </ion-card-header>
                     <ion-card-content class="ion-text-center">
-                        <a>POLÍTICAS DE AUTOCUIDADO</a>
+                        <a 
+                        href="https://www.gesmujer.org/sitio/wp-content/uploads/2023/07/11.-Formato-Politicas-Institucionales-de-Autocuidado.docx" 
+                        target="_blank" 
+                        rel="noopener noreferrer">POLÍTICAS DE AUTOCUIDADO</a>
                         <p>*Necesitas conexión a internet</p>
                     </ion-card-content>
                 </ion-card>
             </ion-col>
             <ion-col size="12">
-                <ion-card (click)="downloadPlan()">
+                <ion-card>
                     <ion-card-header>
                         <img src="../../../assets/Paso1.png" alt="">
                         <ion-card-subtitle class="ion-text-justify">Para dar paso al plan de cuidado colectivo, es importante primero 
@@ -179,7 +184,10 @@
                         </ion-card-subtitle>
                     </ion-card-header>
                     <ion-card-content class="ion-text-center">
-                        <a>PLAN DE AUTOCUIDADO Y CUIDADO COLECTIVO</a>
+                        <a 
+                        href="https://www.gesmujer.org/sitio/wp-content/uploads/2023/08/PLAN-DE-AUTOCUIDADO-COLECTIVO-GESMUJER-POLITICAS.docx" 
+                        target="_blank" 
+                        rel="noopener noreferrer">PLAN DE AUTOCUIDADO COLECTIVO</a>
                         <p>*Necesitas conexión a internet</p>
                     </ion-card-content>
                 </ion-card>
