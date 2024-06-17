@@ -53,6 +53,7 @@ section.card {
   transform: rotateX(-90deg);
   transform-origin: bottom;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   overflow-y: auto;
 }
 .card:hover .card__content {
   transform: rotateX(0deg);
@@ -83,6 +84,9 @@ section.card {
 }
 h2 {
   font-size: 18px;
+}
+hf{
+  font-size: 15;
 }
 .notification {
   display: flex;
