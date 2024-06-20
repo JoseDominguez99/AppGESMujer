@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ViolentometroComponent } from 'src/app/components/violentometro/violentometro.component';
 import { ModalController } from '@ionic/angular';
-import { NetworkService } from 'src/app/services/network.service';
 import { IntroPrevencionComponent } from 'src/app/components/intro-prevencion/intro-prevencion.component';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-prevencion',
   templateUrl: './prevencion.page.html',
@@ -12,10 +12,15 @@ export class PrevencionPage implements OnInit {
 
   constructor(
     private modalCtrl: ModalController,
+    private router: Router,
   ) { }
 
   ngOnInit() {
     this.mostrarModal();
+  }
+
+  abrirRecursos(){
+    this.router.navigate(['/recursos']);
   }
 
   async abrirTest(){
