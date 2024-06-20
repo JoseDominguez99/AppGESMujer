@@ -331,41 +331,196 @@
 
   <div *ngIf="seleccion === 'Digital'" class="ion-text-center ion-padding">
     <h1>AUTOCUIDADO DIGITAL</h1>
-    <p class="ion-text-justify ion-padding">Cuido mi seguridad digital:
-      Hago uso estratégico de la
-      tecnología, plataformas digitales,
-      redes sociales, conozco mis derechos digitales y de qué manera la
-      ley me protege. Promuevo la desconexión digi</p>
-      <img src="../../../assets/Digital.png" alt="" style="max-width: 80%; max-height: 80%;" class="" ><br><br>
+    <p class="ion-text-justify ion-padding">
+      Cuido mi seguridad digital: Hago uso estratégico de la tecnología, plataformas digitales, redes sociales, 
+      conozco mis derechos digitales y de qué manera la ley me protege. Promuevo la desconexión digi.
+    </p>
+    <img src="../../../assets/Digital.png" alt="" style="max-width: 80%; max-height: 80%;" class=""><br><br>
+  
+    <h2 class="fancy" style="--w: 50vw; --c: #8d078d; --b:4px; --g: 40px">Lo que se sabe</h2><br>
+    
+    <div>
+      <ion-icon class="custom-icon2" name="megaphone-outline"></ion-icon>
+      <p class="ion-text-justify">
+        <strong>La violencia digital contra las mujeres se refiere a la violencia y el acoso en línea dirigidos a mujeres, 
+        y que tiene el potencial de afectar su seguridad, privacidad y bienestar psicológico.</strong> Puede manifestarse 
+        de diversas formas, desde el acoso y la intimidación en línea hasta la difusión no consensuada de imágenes íntimas 
+        o la exposición de información personal.
+      </p><br>
+      <ion-icon class="custom-icon2" name="megaphone-outline"></ion-icon>
+      <p class="ion-text-justify">
+        La violencia digital contra las mujeres puede tener graves consecuencias para su bienestar y seguridad, como la 
+        pérdida de empleo, la exclusión social, así como un impacto emocional profundo, incluyendo el estrés, la ansiedad 
+        y la depresión, entre otras manifestaciones.
+      </p><br>
+      <img src="../../../assets/divi.png" alt="" style="max-width: 80%; max-height: 80%;" class=""><br><br>
+      <ion-icon class="custom-icon2" name="female-outline"></ion-icon>
+      <p class="ion-text-justify">
+        <strong>Ley Olimpia es una ley mexicana </strong> que busca prevenir, sancionar y erradicar la violencia digital de género, 
+        en particular, la difusión no consensuada de contenido íntimo, también conocido como "porno venganza". 
+        Fue promulgada por primera vez en el estado de Puebla, México, en 2018, y posteriormente se ha adoptado en otros 
+        estados del país.
+      </p>
+    </div>
+    <p> <strong>A continuación, se presentan algunos tipos comunes de violencia digital de 
+      género</strong> </p><br>
+        <ion-row>
+          <ion-col size="12">
+            <swiper-container
+            class="swiperCard"
+            effect="coverflow"
+            [centeredSlides]="true"
+            [slidesPerView]="'auto'"
+            [coverflowEffect]="{rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: true}">
+              <swiper-slide>
+                <ion-card class="card2">
+                  <ion-card-tittle class="name"><strong>Acoso en línea</strong></ion-card-tittle>
+                  <ion-label class="ion-text-justify ion-padding">
+                    Consiste en enviar mensajes 
+                    ofensivos, amenazantes o 
+                    intimidatorios a través de 
+                    redes sociales, correo electrónico, aplicaciones de mensajería o cualquier otra forma de 
+                    comunicación en línea.
+                      </ion-label>
+                      <ion-label class="p"><ion-icon slot="start" name="arrow-back" class="custom-icon"></ion-icon> Desliza para ver más</ion-label>
+                    </ion-card>
+              </swiper-slide>
+              <swiper-slide>
+                <ion-card class="card2">
+                  <ion-card-tittle class="name"><strong>Ciberstalking</strong></ion-card-tittle>
+                  <ion-label class="ion-text-justify ion-padding">
+                    Consiste en el acoso y la 
+                    persecución en línea de una 
+                    persona, a menudo con el 
+                    objetivo de intimidar, asustar 
+                    o controlar a la víctima.   <br><br><br>                 
+                      </ion-label>
+                      <ion-label class="p"><ion-icon slot="start" name="arrow-back" class="custom-icon"></ion-icon> Desliza para ver más</ion-label>
+                    </ion-card>
+              </swiper-slide>
+              <swiper-slide>
+                <ion-card class="card2">
+                  <ion-card-tittle class="name"><strong>Suplantación de identidad</strong></ion-card-tittle>
+                  <ion-label class="ion-text-justify ion-padding">
+                    Consiste en crear perfiles falsos 
+                    en redes sociales u otras plataformas en línea, usando el nombre y las imágenes de una mujer 
+                    sin su consentimiento.<br>
+                    Esto puede ser utilizado para   
+                    acosar o difundir información 
+                    falsa o difamatoria.
+                      </ion-label>
+                      <ion-label class="p"><ion-icon slot="start" name="arrow-back" class="custom-icon"></ion-icon> Desliza para ver más</ion-label>
+                    </ion-card>
+              </swiper-slide>
+              <swiper-slide>
+                <ion-card class="card2">
+                  <ion-card-tittle class="name"><strong>Difusión no consensuada de contenido íntimo</strong></ion-card-tittle>
+                  <ion-label class="ion-text-justify ion-padding">
+                    Se refiere a la publicación o 
+                    distribución de imágenes o 
+                    videos íntimos sin el consentimiento de la persona afectada. También conocida como 
+                    "porno venganza", esta práctica puede tener graves consecuencias para la privacidad, 
+                    la reputación y la seguridad 
+                    de las mujeres.
+                    
+                      </ion-label>
+                      <ion-label class="p"><ion-icon slot="start" name="arrow-back" class="custom-icon"></ion-icon> Desliza para ver más</ion-label>
+                    </ion-card>
+              </swiper-slide>
+              <swiper-slide>
+                <ion-card class="card2">
+                  <ion-card-tittle class="name"><strong>Discriminación en línea</strong></ion-card-tittle>
+                  <ion-label class="ion-text-justify ion-padding">
+                    Se refiere a la discriminación y el 
+                    hostigamiento en línea basado 
+                    en la identidad de género de una 
+                    persona, su orientación sexual, 
+                    raza, religión u otras características personales    <br><br><br>                  
+                      </ion-label>
+                      <ion-label class="p"><ion-icon slot="start" name="arrow-back" class="custom-icon"></ion-icon> Desliza para ver más</ion-label>
+                    </ion-card>
+              </swiper-slide>
+              <swiper-slide>
+                <ion-card class="card2">
+                  <ion-card-tittle class="name"><strong>Violencia sexual en línea</strong></ion-card-tittle>
+                  <ion-label class="ion-text-justify ion-padding">
+                    Incluye la realización de actividades sexuales explícitas o 
+                    inapropiadas a través de 
+                    internet, como enviar imágenes o mensajes sexuales no 
+                    solicitados.      <br><br><br>             
+                      </ion-label>
+                      <ion-label class="p"><ion-icon slot="start" name="arrow-back" class="custom-icon"></ion-icon> Desliza para ver más</ion-label>
+                    </ion-card>
+              </swiper-slide>
+              <swiper-slide>
+                <ion-card class="card2">
+                  <ion-card-tittle class="name"><strong>Robo de información</strong></ion-card-tittle>
+                  <ion-label class="ion-text-justify ion-padding">
+                    Se da cuando se instala consciente o inconscientemente 
+                    software malicioso, tal como 
+                    spyware, fishing, u otros, que 
+                    extraen información de las 
+                    computadoras, capturando 
+                    contraseñas en formularios o 
+                    cuentas bancarias, así como 
+                    vigilancia de los movimientos 
+                    que se hacen desde nuestros 
+                    equipos.
+                      </ion-label>
+                      <ion-label class="p"><ion-icon slot="start" name="arrow-back" class="custom-icon"></ion-icon> Desliza para ver más</ion-label>
+                    </ion-card>
+              </swiper-slide>
+            </swiper-container>
+          </ion-col>
+        </ion-row>
 
-      <h2 class="fancy" style="--w: 50vw;--c: #8d078d;--b:4px;--g: 40px">Lo que se sabe</h2><br>
-      <div>
-        <ion-icon class="custom-icon2" name="megaphone-outline"></ion-icon>
-        <p  class="ion-text-justify">
-          <strong> La violencia digital contra las mujeres se refiere a la violencia y el 
-            acoso en línea dirigidos a mujeres, y que tiene el potencial de 
-            afectar su seguridad, privacidad y bienestar psicológico.  </strong>
-            Puede 
-            manifestarse de diversas formas, desde el acoso y la intimidación 
-            en línea hasta la difusión no consensuada de imágenes íntimas o la exposición de 
-            información personal.
-          </p> <br>
-          <ion-icon class="custom-icon2" name="megaphone-outline"></ion-icon>
-          <p class="ion-text-justify">
-            La violencia digital contra las mujeres puede tener graves consecuencias para su 
-            bienestar y seguridad, como la pérdida de empleo, la exclusión social, así como un 
-            impacto emocional profundo, incluyendo el estrés, la ansiedad y la depresión, entre   
-            otras manifestaciones.
-          </p>
-          //imagenes de pasos y recomendaciones//
-
-          
-
-
-      </div><br>
-
-
+        <div>
+          <h2 class="fancy" style="--w: 50vw;--c: #8d078d;--b:4px;--g: 40px">Caricia para el alma</h2><br>
+          <p class="morado2">Presiona la imagen y descubre el poema</p>
+          <div class="ion-text-center ion-padding">
+        <section id="card1" class="card">
+          <img src="../../../assets/Digital.png" alt="">
+          <div class="card__content">
+            <p><strong>El poder de elegir.</strong></p>
+            <p style="text-align: left;">
+              <em>            
+                Yo estaba encerrada en una concha<br>
+                Creía que era incapaz de cambiar mi vida.<br>
+                Luego encontré la profunidad del mar,<br>
+                la belleza del cielo,<br>
+                la libertad de los págaros,<br>
+                la fuerza del viento,<br>
+                la ligereza de las nubes,<br>
+                la luz del sol,<br>
+                y he sentido que todo eso era yo.<br>
+                Yo era profunfa como el mar,<br>
+                bella como el cielo,<br>
+                libre como los pájaros,<br>
+                potente como el viente,<br>
+                ligera como las nubes,<br>
+                luminosa como el sol,<br>
+                y entonces he elegido volver<br>
+                a ser lo que era.<br>
+              </em>
+            </p>
+            
+            <p class=" ion-text-justify">            
+              Autora: <strong> Annie Marquier</strong><br>
+              </p>
+          </div>
+        </section>
+      </div>
+        <br><br>
+        <p><strong>Te invitamos a descargar y leer manual donde se menciona más informacion útil.</strong></p><br>
+        <ion-button (click)="leermas()" style="--background: purple; --color: white;">
+          Leer más
+        </ion-button>
+                
+      </div>
 
   </div>
+
+
+
   
 </ion-content>
