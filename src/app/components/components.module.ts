@@ -15,6 +15,9 @@ import { IntroPrevencionComponent } from './intro-prevencion/intro-prevencion.co
 import { IntroRecursosComponent } from './intro-recursos/intro-recursos.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { EngancheComponent } from './enganche/enganche.component';
+import { AlarmasComponent } from './alarmas/alarmas.component';
+import { RespiracionComponent } from './respiracion/respiracion.component';
+import { RelajacionComponent } from './relajacion/relajacion.component';
 
 
 
@@ -33,7 +36,10 @@ import { EngancheComponent } from './enganche/enganche.component';
     IntroPrevencionComponent,
     IntroRecursosComponent,
     MapaComponent,
-    EngancheComponent
+    EngancheComponent,
+    AlarmasComponent,
+    RespiracionComponent,
+    RelajacionComponent
   ],
   imports: [
     CommonModule,
@@ -51,7 +57,10 @@ import { EngancheComponent } from './enganche/enganche.component';
     IntroPrevencionComponent,
     IntroRecursosComponent,
     MapaComponent,
-    EngancheComponent
+    EngancheComponent,
+    AlarmasComponent,
+    RespiracionComponent,
+    RelajacionComponent
   ],
 })
 export class ComponentsModule { }

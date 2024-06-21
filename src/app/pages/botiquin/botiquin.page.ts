@@ -6,6 +6,7 @@ import { ModalController } from '@ionic/angular';
 import { IntroBotiquinComponent } from 'src/app/components/intro-botiquin/intro-botiquin.component';
 import { MapaComponent } from 'src/app/components/mapa/mapa.component';
 import { EngancheComponent } from 'src/app/components/enganche/enganche.component';
+import { RespiracionComponent } from 'src/app/components/respiracion/respiracion.component';
 
 @Component({
   selector: 'app-botiquin',
@@ -31,6 +32,13 @@ export class BotiquinPage implements OnInit {
     this.audio = new Audio();
     this.audio.src = '../../assets/meditacion.mp3';
     this.audio.load();
+  }
+
+  async abrirRespiracion(){
+    const modal = await this.modalCtrl.create({
+      component: RespiracionComponent,
+    });
+    await modal.present();
   }
 
   async mostrarModal(){
