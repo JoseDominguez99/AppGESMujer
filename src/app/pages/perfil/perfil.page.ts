@@ -59,7 +59,7 @@ export class PerfilPage implements OnInit {
     const input = event.target as HTMLInputElement;
     if (input.files && input.files[0]) {
       const file = input.files[0];
-      const filePath = `profile_images/${new Date().getTime()}_${file.name}`;
+      const filePath = `profile_images/${this.userMail}/profile_pictures/${file.type.split('/')[1]}`;
       const fileRef = this.storage.ref(filePath);
       const uploadTask = this.storage.upload(filePath, file);
 
@@ -67,23 +67,12 @@ export class PerfilPage implements OnInit {
         finalize(() => {
           fileRef.getDownloadURL().subscribe((url) => {
             this.perfilFoto = url;
-            this.saveImageUrl(url);
           });
         })
       ).subscribe();
     }
   }
-  saveImageUrl(url: string) {
-    this.firestore.collection('Users', ref => ref.where('Correo', '==', this.userMail)).get().subscribe(snapshot => {
-      snapshot.forEach(doc => {
-        this.firestore.collection('Users').doc(doc.id).update({ profileImageUrl: url }).then(() => {
-          console.log('URL de la imagen guardada en Firestore');
-        }).catch(error => {
-          console.error('Error al guardar la URL en Firestore:', error);
-        });
-      });
-    });
-  }
+  
  
   obtenerDatosUsuario() {
     this.firestore.collection('Users', ref => ref.where('Correo', '==', this.userMail)).valueChanges().subscribe((data: any[]) => {

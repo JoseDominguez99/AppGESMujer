@@ -69,7 +69,7 @@ export class AlarmasComponent  implements OnInit {
           schedule: {
             at: horaDeAlarma
           },
-          sound: 'default'
+          sound: 'default',
         }
       ]
     });
