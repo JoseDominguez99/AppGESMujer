@@ -22,8 +22,6 @@ import { FileTransfer } from '@awesome-cordova-plugins/file-transfer/ngx';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    
-    
     //Se llaman a los módulos de Firebase
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
