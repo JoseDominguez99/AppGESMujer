@@ -1,0 +1,37 @@
+ion-card {
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+  
+      .vocal-image {
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+      }
+  
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #333;
+      }
+    }
+  }
+.red{
+    width: auto;
+    height: auto;
+    background-color: rgb(205, 155, 97);
+    border-radius: 0; /* Para esquinas sin bordes */
+
+}
+
+h1{
+    font-size: 30px !important;
+    font-weight: 800 !important;
+    color: #a86309;
+    padding: 5px;
+    text-shadow: -4px 2px 10px #ABB8C3;
+}
