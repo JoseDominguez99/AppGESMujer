@@ -1,28 +1,26 @@
 ion-card {
     .card-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      
-  
-      .vocal-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .vocal-image {
         width: 100%;
-        max-width: 200px;
-        margin-bottom: 15px;
+        max-width: 100%;
+        margin-bottom: 5px;
         border-radius: 5px;
-      }
-  
-      p {
-        font-size: 16px;
-        line-height: 1.5;
-        color: #333;
-      }
     }
-  }
+
+    p {
+        font-size: 15px;
+        color: #563600;
+    }
+    }
+}
 .red{
-    width: auto;
-    height: auto;
+    width: 90%;
+    height:100%;
     background-color: rgb(205, 155, 97);
     border-radius: 0; /* Para esquinas sin bordes */
 

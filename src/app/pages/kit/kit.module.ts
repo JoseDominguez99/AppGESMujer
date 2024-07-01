@@ -9,6 +9,7 @@ import { KitPageRoutingModule } from './kit-routing.module';
 import { KitPage } from './kit.page';
 
 import { ComponentsModule } from 'src/app/components/components.module';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { ComponentsModule } from 'src/app/components/components.module';
     KitPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [KitPage]
+  declarations: [KitPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class KitPageModule {}
