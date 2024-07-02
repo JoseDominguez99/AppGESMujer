@@ -2,7 +2,7 @@
 
 <ion-content>
 <h1 class="ion-text-center">Violencia digital</h1>
-<div>
+    <div>
     <ion-row>
         <ion-col size="12">
             <swiper-container
@@ -12,19 +12,34 @@
             [slidesPerView]="'auto'"
             [coverflowEffect]="{rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: true}">
 
+            <swiper-slide>
+                <ion-card class="red">
+                    <ion-card>
+                        <ion-card-header>
+                    <ion-card-title class="ion-text-center smaller-title"><strong>¿Qué es la violencia digital?</strong></ion-card-title>
+                        </ion-card-header>
+                        <ion-card-content>
+                        <div class="card-content">
+                            <img src="../../../assets/dig.png" alt="Baile de Forma Libre" class="vocal-image"/>
+                            <p class="ion-text-justify ion-padding">
+                                La violencia digital abarca actos como acoso en línea, difamación, divulgar información personal sin consentimiento, publicar imágenes íntimas no autorizadas y hackear cuentas, dirigidos a dañar, desacreditar o intimidar en el entorno digital.                            </p>
+                        </div><br>
+                        </ion-card-content>
+                    </ion-card>
+                </ion-card>
+            </swiper-slide>
 
         <swiper-slide>
             <ion-card class="red">
                 <ion-card>
                     <ion-card-header>
-                <ion-card-title class="ion-text-center">¿Qué es?</ion-card-title>
+                <ion-card-title class="ion-text-center smaller-title"><strong>¿Cómo afecta a las defensoras?</strong></ion-card-title>
                     </ion-card-header>
                     <ion-card-content>
                     <div class="card-content">
                         <img src="../../../assets/dig.png" alt="Baile de Forma Libre" class="vocal-image"/>
                         <p class="ion-text-justify ion-padding">
-                        
-La violencia digital abarca actos como acoso en línea, difamación, divulgar información personal sin consentimiento, publicar imágenes íntimas no autorizadas y hackear cuentas, dirigidos a dañar, desacreditar o intimidar en el entorno digital.
+                            La violencia digital busca silenciar y desalentar a defensoras de derechos humanos, impactando significativamente su vida personal y profesional, generando estrés, ansiedad y miedo, y llevándolas a abandonar su activismo.
                         </p>
                     </div>
                     </ion-card-content>
@@ -36,43 +51,133 @@ La violencia digital abarca actos como acoso en línea, difamación, divulgar in
             <ion-card class="red">
                 <ion-card>
                     <ion-card-header>
-                <ion-card-title class="ion-text-center">¿Qué es?</ion-card-title>
+                        <ion-card-title class="ion-text-center smaller-title"><strong>¿Qué puedo hacer para prevenir?</strong></ion-card-title>
                     </ion-card-header>
                     <ion-card-content>
-                    <div class="card-content">
-                        <img src="../../../assets/dig.png" alt="Baile de Forma Libre" class="vocal-image"/>
-                        <p class="ion-text-justify ion-padding">
-                        La violencia digital contra defensoras de derechos humanos incluye acoso, difamación, discriminación, publicación no consensuada de información personal e imágenes íntimas, hackeo, suplantación de identidad y difusión de rumores. Estos actos buscan desacreditar y socavar a las mujeres defensoras, activistas y líderes feministas en el ámbito digital.
-                        </p>
-                    </div>
+                        <div class="card-content">
+                            <img src="../../../assets/dig.png" alt="Baile de Forma Libre" class="vocal-image"/>
+                            <p class="ion-justify-content-center" style="text-align: justify;">
+                                <strong>• Conciencia sobre la violencia digital,</strong> protege tu información personal.
+                            </p>
+                            <p class="ion-justify-content-center" style="text-align: justify;">
+                                <strong>• Limita la cantidad de información personal que compartes.</strong>
+                            </p>
+                            <p class="ion-justify-content-center" style="text-align: justify;">
+                                <strong>• Bloquea y denuncia:</strong> Aprende cómo bloquear y denunciar a usuarios que te estén acosando o difundiendo contenido ofensivo.
+                            </p>
+                            <p class="ion-justify-content-center" style="text-align: justify;">
+                                <strong>• Mantén la evidencia:</strong> Si experimentas violencia digital, guarda capturas de pantalla, correos electrónicos, mensajes o cualquier otra prueba que puedas recopilar.
+                            </p> 
+                            <p class="ion-justify-content-center" style="text-align: justify;">
+                                <strong>• Busca apoyo:</strong> No enfrentes la violencia digital sola. Busca el apoyo de personas de confianza, como amistades, familiares o colegas.
+                            </p> 
+                            <p class="ion-justify-content" style="text-align: justify;">
+                                <strong>• Denuncia ante las autoridades.</strong>
+                            </p> 
+                        </div>
                     </ion-card-content>
                 </ion-card>
+                
+                
             </ion-card>
         </swiper-slide>
-
-        <swiper-slide>
-            <ion-card class="red">
-                <ion-card>
-                    <ion-card-header>
-                <ion-card-title class="ion-text-center">¿Qué es?</ion-card-title>
-                    </ion-card-header>
-                    <ion-card-content>
-                    <div class="card-content">
-                        <img src="../../../assets/dig.png" alt="Baile de Forma Libre" class="vocal-image"/>
-                        <p class="ion-text-justify ion-padding">
-                        La violencia digital contra defensoras de derechos humanos incluye acoso, difamación, discriminación, publicación no consensuada de información personal e imágenes íntimas, hackeo, suplantación de identidad y difusión de rumores. Estos actos buscan desacreditar y socavar a las mujeres defensoras, activistas y líderes feministas en el ámbito digital.
-                        </p>
-                    </div>
-                    </ion-card-content>
-                </ion-card>
-            </ion-card>
-        </swiper-slide>
-
-
-
-
         </swiper-container>
         </ion-col>
     </ion-row>
+    <ion-button  expand="block" fill="clear" shape="round" style="color:rgb(205, 155, 97);">
+        Deliza para ver más
+        <ion-icon slot="start" name="arrow-back"></ion-icon>
+    </ion-button>
     </div>
+
+
+    <h2 class="ion-text-center">Ley Olimpia</h2>
+
+    <div>
+        <ion-row>
+            <ion-col size="12">
+                <swiper-container
+                class="swiperCard"
+                effect="coverflow"
+                [centeredSlides]="true"
+                [slidesPerView]="'auto'"
+                [coverflowEffect]="{rotate: 50, stretch: 0, depth: 100, modifier: 1, slideShadows: true}">
+    
+                <swiper-slide>
+                    <ion-card class="violeta">
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-title class="ion-text-center smaller-title"><strong>¿Qué es la ley Olimpia?</strong></ion-card-title><br>
+                            </ion-card-header>
+                            <ion-card-content>
+                                <div class="card-content">
+                                    <img src="../../../assets/olimpia.png" alt="Baile de Forma Libre" class="vocal-image"/>
+                                    <p class="p2 ion-text-justify ion-padding">
+                                        La “Ley Olimpia” no se refiere a una ley como tal, sino a un conjunto de reformas legislativas encaminadas a reconocer la violencia digital y sancionar los delitos que violen la intimidad sexual de las personas a través de medios digitales, también conocida como ciberviolencia.
+                                    </p>
+                                </div><br>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-card>
+                </swiper-slide>
+
+
+                <swiper-slide>
+                    <ion-card class="violeta">
+                        <ion-card>
+                            <ion-card-header>
+                                <ion-card-title class="ion-text-center smaller-title"><strong>Conductas que atentan contra la intimidad sexual</strong></ion-card-title>
+                            </ion-card-header>
+                            <ion-card-content>
+                                <div class="card-content">
+                                    <img src="../../../assets/olimpia.png" alt="Baile de Forma Libre" class="vocal-image"/><br>
+                                    <p class="ion-justify-content-center" style="text-align: justify;">
+                                        • Video grabar, audio grabar, fotografiar o elaborar videos reales o simulados 
+                                        de contenido sexual íntimo, de una persona sin su consentimiento o 
+                                        mediante engaño.
+                                    </p>
+                                    <p class="ion-justify-content-center" style="text-align: justify;">
+                                        • Exponer, distribuir, difundir, exhibir, reproducir, transmitir, comercializar,
+                                        ofertar, intercambiar y compartir imágenes, audios o videos de contenido 
+                                        sexual íntimo de una persona, a sabiendas de que no existe consentimiento,
+                                        mediante materiales impresos, correo electrónico, mensajes telefónicos, 
+                                        redes sociales o cualquier medio tecnológico.
+                                    </p>
+                                </div>
+                            </ion-card-content>
+                        </ion-card>
+                    </ion-card>
+                </swiper-slide>
+                
+    
+            <swiper-slide>
+                <ion-card class="violeta">
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title class="ion-text-center smaller-title"><strong>¿Cómo hacer una denuncia por violencia digital?</strong></ion-card-title>
+                        </ion-card-header>
+                        <ion-card-content>
+                            <div class="card-content">
+                                <img src="../../../assets/olimpia.png" alt="Baile de Forma Libre" class="vocal-image"/>
+                                <p class="ion-text-justify ion-padding">
+                            
+                                </p>
+                            </div>
+                        </ion-card-content>
+                    </ion-card>
+                    
+                    
+                </ion-card>
+            </swiper-slide>
+
+
+            </swiper-container>
+            </ion-col>
+        </ion-row>
+        <ion-button  expand="block" fill="clear" shape="round" style="color:rgb(129, 11, 133);">
+            Deliza para ver más
+            <ion-icon slot="start" name="arrow-back"></ion-icon>
+        </ion-button>
+        </div>
+
 </ion-content>
