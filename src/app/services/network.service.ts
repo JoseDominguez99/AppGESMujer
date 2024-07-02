@@ -31,7 +31,6 @@ export class NetworkService {
     this.isConnected = status.connected;
     if (!status.connected) {
       this.mostrarToast('Conéctate a una red para acceder al contenido completo');
-      this.router.navigate(['./perfil']);
     }
   }
 
