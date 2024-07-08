@@ -27,7 +27,11 @@ import { FileTransfer } from '@awesome-cordova-plugins/file-transfer/ngx';
     AngularFirestoreModule,
   ],
   providers:
-  [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy}, File,
+  [
+    { provide: 
+    RouteReuseStrategy, 
+    useClass: 
+    IonicRouteStrategy}, File,
     FileTransfer],
   bootstrap: [AppComponent],
 })
