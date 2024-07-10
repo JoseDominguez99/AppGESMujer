@@ -3,6 +3,9 @@ import { ModalController } from '@ionic/angular';
 import { IntroKitComponent } from 'src/app/components/intro-kit/intro-kit.component';
 import { SwiperOptions } from 'swiper/types';
 import { SwiperModule } from 'swiper/types';
+import { Router } from '@angular/router';
+import { NetworkService } from 'src/app/services/network.service';
+
 
 @Component({
   selector: 'app-kit',
@@ -32,10 +35,13 @@ export class KitPage implements OnInit {
 
 
   constructor(
+    private router: Router,
+    private netService: NetworkService,
     private modalCtrl: ModalController) { }
 
   ngOnInit() {
     this.abrirIntro();
+    console.log(this.netService.isInvited.valueOf());
   }
 
   async abrirIntro(){
@@ -44,5 +50,8 @@ export class KitPage implements OnInit {
     });
     return await modal.present();
   }
-
+  leermas() {
+    this.router.navigateByUrl('/recursos');
+    this.netService.isInvited = true;
+  }
 }
