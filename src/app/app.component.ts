@@ -125,7 +125,7 @@ export class AppComponent {
       },
       {
         id: 3,
-        title: 'Notificacion 1',
+        title: 'Recordatorio 3',
         body: 'Es hora del autocuidado nocturno',
         schedule: {
           at: new Date(new Date().setHours(20, 0, 0)), // Alarma a las 8 de la noche
