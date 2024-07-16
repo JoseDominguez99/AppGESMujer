@@ -27,7 +27,7 @@ export class AppComponent {
     { title: 'Kit de seguridad digital', url: '/kit', icon: 'wifi' },
     { title: 'Kit de sanación', url: '/sanacion', icon: 'heart-half' },
     { title: 'Botiquín de autocuidado', url: '/botiquin', icon: 'medkit' },
-    { title: 'Comunicación acertiva', url: '/comunicacion', icon: 'chatbubble-ellipses' },
+    { title: 'Comunicación asertiva', url: '/comunicacion', icon: 'chatbubble-ellipses' },
     { title: 'Prevención de la violencia', url: '/prevencion', icon: 'hand-right' },
     { title: 'Recursos', url: '/recursos', icon: 'folder-open' },
     { title: 'Créditos', url: '/creditos', icon: 'information-circle' },
