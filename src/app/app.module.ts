@@ -5,6 +5,7 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+
 //Importación del módulo de producción de la aplicación
 import { environment } from 'src/environments/environment';
 //Importación de los módulos de la base de datos en Firebase

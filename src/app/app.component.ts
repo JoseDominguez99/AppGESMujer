@@ -6,7 +6,6 @@ import { Platform } from '@ionic/angular';
 import { NetworkService } from './services/network.service';
 import { ToastController } from '@ionic/angular';
 import { LocalNotifications, LocalNotificationActionPerformed, LocalNotification} from '@capacitor/local-notifications';
-import { AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -40,7 +39,6 @@ export class AppComponent {
     private platform: Platform,
     public netService: NetworkService,
     private toastCtrl: ToastController,
-    private alertCtrl: AlertController,
 
   ) {
     this.initializeApp();
@@ -104,31 +102,42 @@ export class AppComponent {
   }
 
   async horarioNotificaciones(){
+    const currentTime = new Date();
+
+    const morningTime = new Date(currentTime);
+    morningTime.setHours(9, 0, 0, 0);
+
+    const afternoonTime = new Date(currentTime);
+    afternoonTime.setHours(14, 0, 0, 0);
+
+    const nightTime = new Date(currentTime);
+    nightTime.setHours(20, 0, 0, 0);
+
     const notifications = [
       {
         id: 1,
-        title: 'Recordatorio 1',
-        body: 'Es hora del autocuidado matutino',
+        title: 'Buen día',
+        body: 'Te recordamos que es importante realizar acciones de autocuidado por las mañanas',
         schedule: {
-          at: new Date(new Date().setHours(9, 0, 0)), // Alarma a las 9 de la mañana
+          at: morningTime, // Alarma a las 9 de la mañana
         },
         sound: 'default'
       },
       {
         id: 2,
-        title: 'Recordatorio 2',
+        title: '¡Hey! No olvides tu salud',
         body: 'Es hora del autocuidado vespertino',
         schedule: {
-          at: new Date(new Date().setHours(14, 0, 0)), // Alarma a las 2 de la tarde
+          at: afternoonTime, // Alarma a las 2 de la tarde
         },
         sound: 'default'
       },
       {
         id: 3,
-        title: 'Recordatorio 3',
-        body: 'Es hora del autocuidado nocturno',
+        title: '¿Se te olvida algo antes de dormir?',
+        body: 'Te recomendamos realizar el autocuidado nocturno',
         schedule: {
-          at: new Date(new Date().setHours(20, 0, 0)), // Alarma a las 8 de la noche
+          at: nightTime, // Alarma a las 8 de la noche
         },
         sound: 'default'
       },
