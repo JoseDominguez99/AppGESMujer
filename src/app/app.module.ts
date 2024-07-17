@@ -4,7 +4,7 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { IonicStorageModule, Storage } from '@ionic/storage-angular';
 
 //Importación del módulo de producción de la aplicación
 import { environment } from 'src/environments/environment';
@@ -26,6 +26,7 @@ import { FileTransfer } from '@awesome-cordova-plugins/file-transfer/ngx';
     //Se llaman a los módulos de Firebase
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    IonicStorageModule.forRoot(),
   ],
   providers:
   [

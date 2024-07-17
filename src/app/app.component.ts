@@ -6,6 +6,7 @@ import { Platform } from '@ionic/angular';
 import { NetworkService } from './services/network.service';
 import { ToastController } from '@ionic/angular';
 import { LocalNotifications, LocalNotificationActionPerformed, LocalNotification} from '@capacitor/local-notifications';
+import { Storage } from '@ionic/storage-angular';
 
 
 @Component({
@@ -16,6 +17,7 @@ import { LocalNotifications, LocalNotificationActionPerformed, LocalNotification
 export class AppComponent {
   userMail: string | null = null;
   alarma: any;
+  private storage: Storage | null = null;
 
   public appPages = [
     { title: 'Registrarme', url: '/inicio', icon: 'person-circle' },
@@ -39,6 +41,7 @@ export class AppComponent {
     private platform: Platform,
     public netService: NetworkService,
     private toastCtrl: ToastController,
+    private storageService: Storage,
 
   ) {
     this.initializeApp();
@@ -60,10 +63,20 @@ export class AppComponent {
       this.netService.checkNetworkConnection();
       this.permisos();
     });
-
+    this.checkFirstTimeOpen();
   }
   isLoggedIn(): boolean {
     return !!this.userMail;
+  }
+
+  async checkFirstTimeOpen() {
+    const isFirstTime = await this.storage?.get('isFirstTimeOpen');
+    if (isFirstTime === null) {
+      await this.storage?.set('isFirstTimeOpen', false);
+      this.router.navigate(['/bienvenida']);
+    } else {
+      this.router.navigate(['/home']);
+    }
   }
 
   async permisos(){

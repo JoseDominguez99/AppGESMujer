@@ -19,17 +19,16 @@ export class BienvenidaPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    if(this.visto > 0) {
-      this.router.navigateByUrl('/home');
-    }
+    
   }
 
   aceptar() {
     this.router.navigateByUrl('/home');
-    this.visto = 1;
     this.netService.isInvited = true;
   }
 
+
+  
   irARegistro() {
     this.router.navigateByUrl('/inicio');
     this.netService.isInvited = false;

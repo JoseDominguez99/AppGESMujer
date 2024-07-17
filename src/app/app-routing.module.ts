@@ -7,6 +7,10 @@ const routes: Routes = [
     redirectTo: 'bienvenida',
     pathMatch: 'full'
   },
+
+
+
+  
   {
     path: 'perfil',
     loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
