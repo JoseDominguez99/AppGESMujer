@@ -19,7 +19,6 @@ export class BienvenidaPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.visto = 1;
     if(this.visto > 0) {
       this.router.navigateByUrl('/home');
     }
@@ -27,6 +26,7 @@ export class BienvenidaPage implements OnInit {
 
   aceptar() {
     this.router.navigateByUrl('/home');
+    this.visto = 1;
     this.netService.isInvited = true;
   }
 
