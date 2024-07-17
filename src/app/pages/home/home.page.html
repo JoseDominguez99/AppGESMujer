@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title class="ion-text-center" color="light">Home</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button color="light"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<img src="../../../assets/Guía Gozosa - Banner Micrositio.png" alt="">
+  
+<ion-content class="ion-padding ion-text-center">
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6" *ngFor="let page of appPages">
+        <ion-card [routerLink]="page.url">
+          <ion-card-header>
+            <ion-icon [name]="page.icon" slot="start"></ion-icon>
+            <ion-card-title>{{page.title}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>{{page.descripcion}}</ion-label>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<img src="../../../assets/Defensora 05.png" alt="">

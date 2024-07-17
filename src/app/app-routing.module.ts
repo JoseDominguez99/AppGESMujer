@@ -7,6 +7,10 @@ const routes: Routes = [
     redirectTo: 'bienvenida',
     pathMatch: 'full'
   },
+
+
+
+  
   {
     path: 'perfil',
     loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
@@ -62,6 +66,10 @@ const routes: Routes = [
   {
     path: 'comunicacion',
     loadChildren: () => import('./pages/comunicacion/comunicacion.module').then( m => m.ComunicacionPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
 ];
 

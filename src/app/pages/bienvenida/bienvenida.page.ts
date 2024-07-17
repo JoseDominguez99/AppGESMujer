@@ -10,6 +10,7 @@ import { AlarmasComponent } from 'src/app/components/alarmas/alarmas.component';
   styleUrls: ['./bienvenida.page.scss'],
 })
 export class BienvenidaPage implements OnInit {
+  visto = 0;
 
   constructor(
     private router: Router,
@@ -18,14 +19,16 @@ export class BienvenidaPage implements OnInit {
   ) { }
 
   ngOnInit() {
-
+    
   }
 
   aceptar() {
-    this.router.navigateByUrl('/colectivo');
+    this.router.navigateByUrl('/home');
     this.netService.isInvited = true;
   }
 
+
+  
   irARegistro() {
     this.router.navigateByUrl('/inicio');
     this.netService.isInvited = false;
