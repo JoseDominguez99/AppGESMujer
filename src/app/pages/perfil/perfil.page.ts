@@ -100,7 +100,7 @@ export class PerfilPage implements OnInit {
         {
           text: 'Aceptar',
           handler: () => {
-            this.router.navigate(['./metodologias'])
+            this.router.navigate(['./home'])
           }
         }
       ]

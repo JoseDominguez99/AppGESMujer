@@ -14,10 +14,11 @@
       <ion-col size="6" *ngFor="let page of appPages">
         <ion-card [routerLink]="page.url">
           <ion-card-header>
-            <ion-icon [name]="page.icon" slot="start"></ion-icon>
             <ion-card-title>{{page.title}}</ion-card-title>
           </ion-card-header>
           <ion-card-content>
+            <ion-icon slot="start" [ios]="page.icon + '-outline'" [md]="page.icon + '-sharp'"></ion-icon>
+            <br>
             <ion-label>{{page.descripcion}}</ion-label>
           </ion-card-content>
         </ion-card>
