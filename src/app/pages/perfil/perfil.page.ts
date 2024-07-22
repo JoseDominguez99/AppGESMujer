@@ -67,6 +67,16 @@ export class PerfilPage implements OnInit {
         finalize(() => {
           fileRef.getDownloadURL().subscribe((url) => {
             this.perfilFoto = url;
+            
+            this.firestore.collection('Users', ref => ref.where('Correo', '==', this.userMail)).get().subscribe(
+              snapshot => {
+                snapshot.forEach(doc => {
+                  this.firestore.collection('Users').doc(doc.id).update({
+                    profileImageUrl: url
+                  });
+                });
+              }
+            )
           });
         })
       ).subscribe();

@@ -4,8 +4,13 @@
   <ion-grid class="ion-padding">
     <ion-row class="ion-text-center">
       <div class="imagen">
-        <img src="../../../assets/GESMujer45años.png">
+        <img [src]="perfilFoto">
       </div>
+      <ion-col size="12" class="ion-text-center">
+        <ion-button (click)="selectImage()" fill="clear" shape="round">
+          cambiar foto de perfil
+        </ion-button>
+      </ion-col>
       <ion-col size="12">
         <ion-item>
           <ion-input type="text" labelPlacement="floating" label="Nombre" [(ngModel)]="datos.nombre"></ion-input>

@@ -47,7 +47,7 @@ export class InicioPage implements OnInit {
   async login(){
     try{
       await this.authService.login(this.credenciales.correo, this.credenciales.password);
-      this.router.navigate(['/perfil']);
+      this.router.navigate(['/home']);
       this.credenciales.correo = '';
       this.credenciales.password = '';
     }catch(error){
@@ -69,7 +69,7 @@ export class InicioPage implements OnInit {
         this.credenciales.correo = '';
         this.credenciales.password = '';
         this.credenciales.password2 = '';
-        this.router.navigate(['/perfil']);
+        this.router.navigate(['/home']);
       }catch(error){
         this.mostrarToast('Error al registrar usuario. Inténtalo de nuevo más tarde.');
       }
