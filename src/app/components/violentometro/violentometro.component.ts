@@ -23,6 +23,11 @@ export class ViolentometroComponent  implements OnInit {
   si = 0;
   no = 0;
   res = 0;
+  today = new Date;
+  day = this.today.getDay();
+  month = this.today.getMonth() + 1;
+  year = this.today.getFullYear();
+  formattedDate = `${this.day.toString().padStart(2, '0')}/${this.month.toString().padStart(2, '0')}/${this.year}`;
   respuestas = {
     correo: '',
     si: '',
@@ -85,7 +90,10 @@ export class ViolentometroComponent  implements OnInit {
   }
 
   evaluar(){
-    if(this.step == 13 && this.si <=3){
+    if(this.step == 13 && this.si ==0){
+      this.res = 0;
+      this.evaluarViolencia();
+    }else if(this.step == 13 && this.si <=3){
       this.res = 1;
       this.evaluarViolencia();
     }else if( this.step == 13 && this.si >3 && this.si <=8){
@@ -114,17 +122,40 @@ export class ViolentometroComponent  implements OnInit {
 
 
   guardarResultado(){
-    this.firestore.collection('violentometro').add({
-      correo: this.userMail,
-      respuestas_Si: this.si,
-      respuestas_No: this.no,
-    }).then(()=>{
-      this.mostrarToast('Datos guardados correctamente');
-
-    }).catch(error => {
-      this.mostrarToast('Error al registrar tus datos')
-    });
-  }
+    this.firestore.collection('violentometro', ref => ref.where('correo', '==', this.userMail)).get().subscribe(
+      snapshot => {
+        if(!snapshot.empty){
+          snapshot.forEach(doc => {
+            this.firestore.collection('violentometro').doc(doc.id).update({
+              correo: this.userMail,
+              respuestasSi: this.si,
+              respuestasNo: this.no,
+              ultimoTest: this.formattedDate
+            }).then(() => {
+              this.mostrarToast('Datos actualizados correctamente');
+            }).catch(error => {
+              this.mostrarToast('Error al actualizar tus datos');
+            });
+          });
+        }else{
+          this.firestore.collection('violentometro').add({
+            correo: this.userMail,
+            respuestasSi: this.si,
+            respuestasNo: this.no,
+            fecha: this.formattedDate,
+          }).then(()=>{
+            this.mostrarToast('Datos guardados correctamente');
+      
+          }).catch(error => {
+            this.mostrarToast('Error al registrar tus datos')
+          });
+        }   
+      },
+      error => {
+        this.mostrarToast('Error al obtener los datos');
+      }
+    )
+}
 
   async mostrarToast(mensaje: string) {
     const toast = await this.toastCtrl.create({

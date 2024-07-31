@@ -21,6 +21,11 @@ export class TestComponent  implements OnInit {
   si = 0;
   no = 0;
   res = 0;
+  today = new Date;
+  day = this.today.getDay();
+  month = this.today.getMonth() + 1;
+  year = this.today.getFullYear();
+  formattedDate = `${this.day.toString().padStart(2, '0')}/${this.month.toString().padStart(2, '0')}/${this.year}`;
   respuestas = {
     correo: '',
     si: '',
@@ -37,6 +42,8 @@ export class TestComponent  implements OnInit {
     }
 
   ngOnInit() {
+    console.log(this.formattedDate);
+    
     this.netService.checkNetworkConnection2();
     this.auth.authState.subscribe((user: User | null) =>{
       if(user){
@@ -92,16 +99,39 @@ export class TestComponent  implements OnInit {
   }
 
   guardarResultado(){
-    this.firestore.collection('resultadosTest').add({
-      correo: this.userMail,
-      respuestasSi: this.si,
-      respuestasNo: this.no,
-    }).then(()=>{
-      this.mostrarToast('Datos guardados correctamente');
-
-    }).catch(error => {
-      this.mostrarToast('Error al registrar tus datos')
-    });
+      this.firestore.collection('resultadosTest', ref => ref.where('correo', '==', this.userMail)).get().subscribe(
+        snapshot => {
+          if(!snapshot.empty){
+            snapshot.forEach(doc => {
+              this.firestore.collection('resultadosTest').doc(doc.id).update({
+                correo: this.userMail,
+                respuestasSi: this.si,
+                respuestasNo: this.no,
+                ultimoTest: this.formattedDate
+              }).then(() => {
+                this.mostrarToast('Datos actualizados correctamente');
+              }).catch(error => {
+                this.mostrarToast('Error al actualizar tus datos');
+              });
+            });
+          }else{
+            this.firestore.collection('resultadosTest').add({
+              correo: this.userMail,
+              respuestasSi: this.si,
+              respuestasNo: this.no,
+              fecha: this.formattedDate,
+            }).then(()=>{
+              this.mostrarToast('Datos guardados correctamente');
+        
+            }).catch(error => {
+              this.mostrarToast('Error al registrar tus datos')
+            });
+          }   
+        },
+        error => {
+          this.mostrarToast('Error al obtener los datos');
+        }
+      )
   }
 
   async mostrarToast(mensaje: string) {
